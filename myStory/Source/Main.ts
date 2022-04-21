@@ -10,7 +10,7 @@ namespace Template {
   export let transitions = {
     puzzle: {
       duration: 1,
-      alpha: "/Images/FreeTransitions/JigsawThemedTransitions/puzzle.png",
+      alpha: "../Images/FreeTransitions/JigsawThemedTransitions/puzzle.png",
       edge: 1
     }
   }
