@@ -1,0 +1,117 @@
+html,
+body {
+  background-color: black;
+  user-select: none;
+  overflow: hidden;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 2.3vmin;
+  /* color: rgb(240, 18, 103); */
+}
+
+scene {
+  width: 1280px;
+  height: 720px;
+  display: inline-block;
+  position: absolute;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+dialog[type="splash"] {
+  background-image: url("/Images/Backgrounds/starry.gif");
+  /* background-repeat: repeat; */
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+dialog[type="splash"] > p {
+  font-size: 2vmin;
+  /* color: white; */
+  text-align: center;
+}
+
+#FudgeStoryLogo {
+  display: block;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/***** SPEECH, CONTENT, NAMES *****/
+speech {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: beige;
+  /* background-color: rgba(4, 32, 1, 0.9); */
+  /* color: aliceblue; */
+  width: 100%;
+  height: 13%;
+}
+
+speech content {
+  /* color: rgb(70, 203, 40); */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-size: 2vmin;
+  position: absolute;
+  margin-left: 20px;
+}
+
+name {
+  font-size: 2.2vmin;
+  display: block;
+  /* color: rgb(47, 132, 28); */
+  margin-bottom: 10px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin-left: 10px;
+}
+
+dialog[type="splash"] {
+  margin: 0px;
+  padding: 0px;
+  /* width: 100vw; */
+  height: 100vh;
+  background-color: black;
+  /* color: white; */
+  /* border: none;
+  cursor: pointer; */
+  text-align: center;
+}
+dialog[type="splash"] > img#FudgeStoryLogo {
+  width: 100%;
+}
+
+content {
+  color: black;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 3em;
+  width: 500px;
+  height: 150px;
+}
+
+.inventory {
+  background: rgba(253, 253, 253, 0.5);
+}
+
+.inventory ul {
+  max-width: 200px;
+  margin-left: 10%;
+  list-style-type: none;
+}
+
+.inventory ul li img {
+  max-width: 100px;
+  max-height: 100px;
+}
