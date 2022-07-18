@@ -489,7 +489,7 @@ var myStory;
     myStory.locations = {
         web: {
             name: "web",
-            background: "/Images/Backgrounds/spiderweb.jpg",
+            background: "./Images/Backgrounds/spiderweb.jpg",
         },
         graveyard: {
             name: "graveyard",
