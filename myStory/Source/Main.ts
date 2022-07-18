@@ -20,12 +20,12 @@ namespace myStory {
     },
     puzzle: {
       duration: 1,
-      alpha: "/Images/FreeTransitions/JigsawThemedTransitions/puzzle.png",
+      alpha: "Images/FreeTransitions/JigsawThemedTransitions/puzzle.png",
       edge: 1,
     },
     test: {
       duration: 1,
-      alpha: "/Images/FreeTransitions/2.jpg",
+      alpha: "Images/FreeTransitions/2.jpg",
       edge: 1,
     },
   };
@@ -41,28 +41,28 @@ namespace myStory {
   export let locations = {
     web: {
       name: "web",
-      background: "/Images/Backgrounds/spiderweb.jpg",
+      background: "Images/Backgrounds/spiderweb.jpg",
     },
     graveyard: {
       name: "graveyard",
-      background: "/Images/Backgrounds/graveyard.jpg",
+      background: "Images/Backgrounds/graveyard.jpg",
     },
     restaurant_underTable: {
       name: "restaurant_undertable",
       background:
-        "/Images/Backgrounds/restaurant_unter_table-studio_cartoon.jpg",
+        "Images/Backgrounds/restaurant_unter_table-studio_cartoon.jpg",
     },
     minivan1: {
       name: "minivan1",
-      background: "/Images/Backgrounds/minivan1.jpg",
+      background: "Images/Backgrounds/minivan1.jpg",
     },
     minivan2: {
       name: "minivan2",
-      background: "/Images/Backgrounds/minivan2.jpg",
+      background: "Images/Backgrounds/minivan2.jpg",
     },
     fly_agaric: {
       name: "fly agaric",
-      background: "/Images/Backgrounds/forest_mushroom-studio_cartoon.jpg",
+      background: "Images/Backgrounds/forest_mushroom-studio_cartoon.jpg",
     },
   };
 
@@ -105,30 +105,30 @@ namespace myStory {
       name: "Mr. Obeer",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        normal: "/Images/Characters/bee.png",
+        normal: "Images/Characters/bee.png",
       },
     },
     webster: {
       name: "Webster",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        angry: "/Images/Characters/maleSpider_angry.png",
-        happy: "/Images/Characters/maleSpider_happy.png",
-        sad: "/Images/Characters/maleSpider_sad.png",
-        normal: "/Images/Characters/maleSpider.png",
-        scared: "/Images/Characters/maleSpider_scared.png",
+        angry: "Images/Characters/maleSpider_angry.png",
+        happy: "Images/Characters/maleSpider_happy.png",
+        sad: "Images/Characters/maleSpider_sad.png",
+        normal: "Images/Characters/maleSpider.png",
+        scared: "Images/Characters/maleSpider_scared.png",
       },
     },
     phobia: {
       name: "Phobia",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        angry: "/Images/Characters/femaleSpider_angry.png",
-        happy: "/Images/Characters/femaleSpider_happy.png",
-        sad: "/Images/Characters/femaleSpider_sad.png",
-        normal: "/Images/Characters/femaleSpider.png",
-        scared: "/Images/Characters/femaleSpider_scared.png",
-        demon: "/Images/Characters/femaleSpider_demon.png",
+        angry: "Images/Characters/femaleSpider_angry.png",
+        happy: "Images/Characters/femaleSpider_happy.png",
+        sad: "Images/Characters/femaleSpider_sad.png",
+        normal: "Images/Characters/femaleSpider.png",
+        scared: "Images/Characters/femaleSpider_scared.png",
+        demon: "Images/Characters/femaleSpider_demon.png",
       },
     },
   };
