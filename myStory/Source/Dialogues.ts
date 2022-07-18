@@ -107,9 +107,10 @@ namespace myStory {
         2: "Was? Wieso?",
         3: "Hmm... So ganz geheuer ist mir das nicht. Ich spinne doch eigentlich schon genug",
         4: "Aber ok. Der Abend war schön. Keinen Grund es jetzt komisch werden zu lassen",
-        5: "Irgendwie fühle ich mich komisch. Was ist das?",
-        6: "Huhu, Jaahaa....",
-        7: "So langsam drifte ich auch ab. Bist du denn schon in deiner Traumwelt?",
+        5:"Mampf Mampf",
+        6: "Irgendwie fühle ich mich komisch. Was ist das?",
+        7: "Huhu, Jaahaa....",
+        8: "So langsam drifte ich auch ab. Bist du denn schon in deiner Traumwelt?",
       },
     },
     Holliday: {
@@ -151,7 +152,7 @@ namespace myStory {
         3: "Gibts hier auch irgendwo einen Park? Dann könnten wir da spazieren gehen",
       },
     },
-    Home: {
+    VanForrestOnReturn: {
       webster: {
         1: "Da könnte ich mich ja glatt zuhause fühlem. Ist sehr ähnlich zu Meinem",
         1_1_01: "Darf ich noch auf eine Fliege mit zu dir hoch kommen?",
@@ -177,7 +178,7 @@ namespace myStory {
         1_3_03:
           "Hier um die Ecke gibt es zwei Schaukeln. Da könnten wir uns ja treffen.",
         1_3_04:
-          "Hihi. Wenn du nicht aufpasst, bekommst du mehr von mir als dir lieb ist.",
+          "Wenn du nicht aufpasst, bekommst du mehr von mir als dir lieb ist.",
         1_3_05: "Also bis morgen ja?",
       },
     },

@@ -27,8 +27,6 @@ namespace myStory {
       case decitionAnswer.iSayYes:
     }
 
-    await ƒS.Character.hideAll();
-    ƒS.Speech.clear();
-    await ƒS.update();
+    await endOfScene();
   }
 }

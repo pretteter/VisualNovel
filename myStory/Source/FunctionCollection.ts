@@ -1,6 +1,9 @@
 namespace myStory {
   export async function moveCharacterToLocaton(
-    character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer,
+    character:
+      | typeof characters.webster
+      | typeof characters.phobia
+      | typeof characters.mrobeer,
     pose: typeof characters.webster.pose.angry,
     locationToMove: { x: number; y: number },
     intervallSeconds: number,
@@ -140,5 +143,15 @@ namespace myStory {
       document.getElementsByTagName("speech") as HTMLCollectionOf<HTMLElement>
     )[0];
     element.style.display = "";
+  }
+
+  export async function endOfScene(sceneToJump?: string) {
+    ƒS.Speech.clear();
+    await ƒS.Character.hideAll();
+    await ƒS.update();
+    if (sceneToJump) return sceneToJump;
+    else {
+      return undefined;
+    }
   }
 }

@@ -53,8 +53,7 @@ namespace myStory {
       0.025,
       1
     );
-    ƒS.Speech.clear();
-    await ƒS.update();
+    await endOfScene();
 
     // ƒS.Sound.play(sounds.nightclub, 0.5);
     // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);

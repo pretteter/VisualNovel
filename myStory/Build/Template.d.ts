@@ -107,6 +107,7 @@ declare namespace myStory {
                 5: string;
                 6: string;
                 7: string;
+                8: string;
             };
         };
         Holliday: {
@@ -148,7 +149,7 @@ declare namespace myStory {
                 3: string;
             };
         };
-        Home: {
+        VanForrestOnReturn: {
             webster: {
                 1: string;
                 1101: string;
@@ -238,6 +239,7 @@ declare namespace myStory {
     }): Promise<void>;
     function tell(character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer, numberOfDialog: number | string): Promise<void>;
     function changeLocation(location: typeof locations.web, transition: typeof transitions.noContent): Promise<void>;
+    function endOfScene(sceneToJump?: string): Promise<string>;
 }
 declare namespace myStory {
     export import ƒ = FudgeCore;
@@ -293,42 +295,9 @@ declare namespace myStory {
             name: string;
             background: string;
         };
-        fly_agaric: {
+        mushroom: {
             name: string;
             background: string;
-        };
-    };
-    let items: {
-        item1: {
-            name: string;
-            description: string;
-            image: string;
-            static: boolean;
-        };
-        item2: {
-            name: string;
-            description: string;
-            image: string;
-        };
-        item3: {
-            name: string;
-            description: string;
-            image: string;
-        };
-        item4: {
-            name: string;
-            description: string;
-            image: string;
-        };
-        item5: {
-            name: string;
-            description: string;
-            image: string;
-        };
-        item6: {
-            name: string;
-            description: string;
-            image: string;
         };
     };
     let characters: {
@@ -369,19 +338,19 @@ declare namespace myStory {
     };
 }
 declare namespace myStory {
-    function AfterRestaurant(): ƒS.SceneReturn;
+    function showCredits(): void;
 }
 declare namespace myStory {
-    function showCredits(): void;
+    function AfterRestaurant(): ƒS.SceneReturn;
 }
 declare namespace myStory {
     function Ending(): ƒS.SceneReturn;
 }
 declare namespace myStory {
-    function FlyAgaric(): ƒS.SceneReturn;
+    function Intro(): ƒS.SceneReturn;
 }
 declare namespace myStory {
-    function Intro(): ƒS.SceneReturn;
+    function Mushroom(): ƒS.SceneReturn;
 }
 declare namespace myStory {
     function Restaurant(): ƒS.SceneReturn;

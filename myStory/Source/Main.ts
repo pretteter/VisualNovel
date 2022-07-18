@@ -60,45 +60,45 @@ namespace myStory {
       name: "minivan2",
       background: "Images/Backgrounds/minivan2.jpg",
     },
-    fly_agaric: {
+    mushroom: {
       name: "fly agaric",
       background: "Images/Backgrounds/forest_mushroom-studio_cartoon.jpg",
     },
   };
 
-  export let items = {
-    item1: {
-      name: "Stift_1",
-      description: "Ein Stift",
-      image: "../Images/Items/Pencils/pencil-1.png",
-      static: true,
-    },
-    item2: {
-      name: "Stift_2",
-      description: "Ein Stift",
-      image: "../Images/Items/Pencils/pencil-2.png",
-    },
-    item3: {
-      name: "Stift_3",
-      description: "Ein Stift",
-      image: "../Images/Items/Pencils/pencil-3.png",
-    },
-    item4: {
-      name: "Stift_4",
-      description: "Ein Stift",
-      image: "../Images/Items/Pencils/pencil-4.png",
-    },
-    item5: {
-      name: "Stift_5",
-      description: "Ein Stift",
-      image: "../Images/Items/Pencils/pencil-5.png",
-    },
-    item6: {
-      name: "Stift_6",
-      description: "Ein Stift",
-      image: "../Images/Items/Pencils/pencil-6.png",
-    },
-  };
+  // export let items = {
+  //   item1: {
+  //     name: "Stift_1",
+  //     description: "Ein Stift",
+  //     image: "../Images/Items/Pencils/pencil-1.png",
+  //     static: true,
+  //   },
+  //   item2: {
+  //     name: "Stift_2",
+  //     description: "Ein Stift",
+  //     image: "../Images/Items/Pencils/pencil-2.png",
+  //   },
+  //   item3: {
+  //     name: "Stift_3",
+  //     description: "Ein Stift",
+  //     image: "../Images/Items/Pencils/pencil-3.png",
+  //   },
+  //   item4: {
+  //     name: "Stift_4",
+  //     description: "Ein Stift",
+  //     image: "../Images/Items/Pencils/pencil-4.png",
+  //   },
+  //   item5: {
+  //     name: "Stift_5",
+  //     description: "Ein Stift",
+  //     image: "../Images/Items/Pencils/pencil-5.png",
+  //   },
+  //   item6: {
+  //     name: "Stift_6",
+  //     description: "Ein Stift",
+  //     image: "../Images/Items/Pencils/pencil-6.png",
+  //   },
+  // };
 
   export let characters = {
     mrobeer: {
@@ -238,8 +238,9 @@ namespace myStory {
         next: "afterRestaurant",
       },
       { id: "afterRestaurant", scene: AfterRestaurant, name: "VanStreet_back" },
+      { id: "vanForrestOnReturn", scene: VanForrestOnReturn, name: "Van in front of Home" },
+      { id: "mushroom", scene: Mushroom, name: "Mushroom" },
       { id: "ending", scene: Ending, name: "Ending" },
-      { id: "mushroom", scene: FlyAgaric, name: "Mushroom" },
     ];
 
     // start the sequence

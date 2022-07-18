@@ -5,8 +5,6 @@ namespace myStory {
     
     
     
-    ƒS.Speech.clear();
-    await ƒS.Character.hideAll();
-    await ƒS.update();
+    await endOfScene();
   }
 }

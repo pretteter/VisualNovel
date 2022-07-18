@@ -76,9 +76,11 @@ namespace myStory {
     await tell(characters.phobia, 9);
     await tell(characters.webster, 11);
 
-    ƒS.Speech.clear();
-    await ƒS.Character.hideAll();
-    await ƒS.update();
+    // ƒS.Speech.clear();
+    // await ƒS.Character.hideAll();
+    // await ƒS.update();
+
+    await endOfScene();
 
     // ƒS.Sound.play(sounds.nightclub, 0.5);
     // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);

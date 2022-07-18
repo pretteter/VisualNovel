@@ -2,6 +2,13 @@ namespace myStory {
   export async function AfterRestaurant(): ƒS.SceneReturn {
     await changeLocation(locations.minivan1, transitions.test);
     currentActiveScene = "AfterRestaurant";
+
+    currentFemaleCoordinates.x = 50;
+    currentFemaleCoordinates.y = 90;
+
+    currentMaleCoordinates.x = 50;
+    currentMaleCoordinates.y = 85;
+
     let decitionAnswer = {
       home: "Sie nach Hause bringen",
       romantic: "romantische Nacht verbringen",
@@ -14,14 +21,16 @@ namespace myStory {
     switch (decition1) {
       case decitionAnswer.home:
         await dialogueHome();
-        return "VanForrestOnReturn"
-        // break;
+        await endOfScene("vanForrestOnReturn");
+        break;
       case decitionAnswer.romantic:
         await dialogueRomantic();
-        return "Ending";
+        await endOfScene("ending");
+        break;
       case decitionAnswer.doSomething:
         await dialogueMushroom();
-        return "Mushroom";
+        await endOfScene("mushroom");
+        break;
     }
 
     ƒS.Speech.clear();
