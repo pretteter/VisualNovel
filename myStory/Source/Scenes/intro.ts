@@ -18,17 +18,17 @@ namespace myStory {
     // );
 
     await changeLocation(locations.web, transitions.test);
-    await newPose(characters.maleSpider, "normal");
+    await newPose(characters.webster, "normal");
 
-    await tell(characters.maleSpider, 1);
-    await tell(characters.maleSpider, 2);
+    await tell(characters.webster, 1);
+    await tell(characters.webster, 2);
 
-    await newPose(characters.femaleSpider, "scared");
-    await newPose(characters.maleSpider, "scared");
-
+    await newPose(characters.phobia, "scared");
+    await newPose(characters.webster, "scared");
+    // await ƒS.Character.animate(characters.phobia,characters.phobia.pose.scared)
     moveCharacterToLocaton(
-      characters.femaleSpider,
-      characters.femaleSpider.pose.scared,
+      characters.phobia,
+      characters.phobia.pose.scared,
       {
         x: 25,
         y: 95,
@@ -36,17 +36,16 @@ namespace myStory {
       0.0025,
       0
     );
-    await tell(characters.femaleSpider, 1);
-
-    await newPose(characters.femaleSpider, "angry");
-    await tell(characters.femaleSpider, 2);
-    await newPose(characters.maleSpider, "normal");
-    await newPose(characters.femaleSpider, "sad");
-    await tell(characters.femaleSpider, 3);
+    await tell(characters.phobia, 1);
+    await newPose(characters.phobia, "angry");
+    await tell(characters.phobia, 2);
+    await newPose(characters.webster, "normal");
+    await newPose(characters.phobia, "sad");
+    await tell(characters.phobia, 3);
 
     moveCharacterToLocaton(
-      characters.maleSpider,
-      characters.maleSpider.pose.happy,
+      characters.webster,
+      characters.webster.pose.happy,
       {
         x: 55,
         y: 80,
@@ -55,28 +54,27 @@ namespace myStory {
       0
     );
 
-    await tell(characters.maleSpider, 3);
-    await tell(characters.maleSpider, 4);
-    await tell(characters.femaleSpider, 5);
-    await newPose(characters.femaleSpider, "happy");
+    await tell(characters.webster, 3);
+    await tell(characters.webster, 4);
+    await tell(characters.phobia, 4);
+    await newPose(characters.phobia, "happy");
 
-    await tell(characters.femaleSpider, 4);
-    await tell(characters.femaleSpider, 5);
-    await newPose(characters.femaleSpider, "normal");
-    await tell(characters.maleSpider, 6);
-    await newPose(characters.maleSpider, "angry");
-    await tell(characters.maleSpider, 7);
-    await tell(characters.femaleSpider, 6);
+    await tell(characters.phobia, 5);
+    await newPose(characters.phobia, "normal");
+    await tell(characters.webster, 6);
+    await newPose(characters.webster, "angry");
+    await tell(characters.webster, 7);
+    await tell(characters.phobia, 6);
 
-    await newPose(characters.maleSpider, "normal");
-    await tell(characters.maleSpider, 8);
-    await tell(characters.maleSpider, 9);
-    await tell(characters.femaleSpider, 7);
-    await tell(characters.maleSpider, 10);
-    await newPose(characters.femaleSpider, "scared");
-    await tell(characters.femaleSpider, 8);
-    await tell(characters.femaleSpider, 9);
-    await tell(characters.maleSpider, 11);
+    await newPose(characters.webster, "normal");
+    await tell(characters.webster, 8);
+    await tell(characters.webster, 9);
+    await tell(characters.phobia, 7);
+    await tell(characters.webster, 10);
+    await newPose(characters.phobia, "scared");
+    await tell(characters.phobia, 8);
+    await tell(characters.phobia, 9);
+    await tell(characters.webster, 11);
 
     ƒS.Speech.clear();
     await ƒS.Character.hideAll();

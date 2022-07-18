@@ -1,47 +1,208 @@
 declare namespace myStory {
     const dialogues: {
         Intro: {
-            Narrator: {
-                T0001: string;
-                T0002: string;
-            };
-            maleSpider: {
-                T0001: string;
-                T0002: string;
-                T0003: string;
-                T0004: string;
-                T0005: string;
-                T0006: string;
-                T0007: string;
-                T0008: string;
-                T0009: string;
-                T0010: string;
-                T0011: string;
+            webster: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
+                6: string;
+                7: string;
+                8: string;
+                9: string;
+                10: string;
+                11: string;
             };
             femaleSpider: {
-                T0001: string;
-                T0002: string;
-                T0003: string;
-                T0004: string;
-                T0005: string;
-                T0006: string;
-                T0007: string;
-                T0008: string;
-                T0009: string;
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
+                6: string;
+                7: string;
+                8: string;
+                9: string;
             };
         };
-        Scene1: {
-            Narrator: {
-                T0001: string;
-                T0002: string;
-            };
-            maleSpider: {
-                T0001: string;
-                T0002: string;
+        VanForrest: {
+            webster: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
             };
             femaleSpider: {
-                T0001: string;
-                T0002: string;
+                1: string;
+                2: string;
+                3: string;
+            };
+        };
+        ToRestaurant: {
+            webster: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+            };
+            femaleSpider: {
+                1: string;
+                2: string;
+                3: string;
+            };
+        };
+        Restaurant: {
+            webster: {
+                1: string;
+                2: string;
+                3: string;
+            };
+            femaleSpider: {
+                1: string;
+                2: string;
+            };
+            obee: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
+            };
+        };
+        AfterRestaurant: {
+            webster: {
+                1: string;
+                1101: string;
+                1102: string;
+                1201: string;
+                1301: string;
+                1302: string;
+            };
+            femaleSpider: {
+                1: string;
+                1101: string;
+                1201: string;
+                1202: string;
+                1203: string;
+                1301: string;
+                1302: string;
+            };
+        };
+        Mushroom: {
+            webster: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
+                1101: string;
+                1201: string;
+            };
+            femaleSpider: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
+                6: string;
+                7: string;
+            };
+        };
+        Holliday: {
+            webster: {
+                1: string;
+                2: string;
+                1101: string;
+                1201: string;
+                3: string;
+                4: string;
+                5: string;
+            };
+            femaleSpider: {
+                1: string;
+                2: string;
+                3: string;
+                1101: string;
+                4: string;
+                5: string;
+                6: string;
+            };
+            obee: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+            };
+        };
+        City: {
+            webster: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+            };
+            femaleSpider: {
+                1: string;
+                2: string;
+                3: string;
+            };
+        };
+        Home: {
+            webster: {
+                1: string;
+                1101: string;
+                1201: string;
+                1202: string;
+                1203: string;
+                1301: string;
+                1302: string;
+                1303: string;
+                1304: string;
+            };
+            femaleSpider: {
+                1: string;
+                1101: string;
+                1102: string;
+                1201: string;
+                1202: string;
+                1301: string;
+                1302: string;
+                1303: string;
+                1304: string;
+                1305: string;
+            };
+        };
+        Swing: {
+            webster: {
+                1: string;
+                2: string;
+                3: string;
+            };
+            femaleSpider: {
+                1: string;
+                2: string;
+                3: string;
+            };
+        };
+        Ending: {
+            webster: {
+                1: string;
+                2: string;
+                3: string;
+            };
+            femaleSpider: {
+                1: string;
+            };
+        };
+        ReturnAfterEnding: {
+            webster: {
+                1: string;
+                2: string;
+                3: string;
+            };
+            femaleSpider: {
+                1: string;
             };
         };
     };
@@ -67,15 +228,16 @@ declare function HSVtoRGB(h: number, s: number, v: number): {
     b: number;
 };
 declare namespace myStory {
-    function moveCharacterToLocaton(character: typeof characters.maleSpider | typeof characters.femaleSpider, pose: typeof characters.maleSpider.pose.angry, locationToMove: {
+    function moveCharacterToLocaton(character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer, pose: typeof characters.webster.pose.angry, locationToMove: {
         x: number;
         y: number;
     }, intervallSeconds: number, hideAfterReaching?: number): Promise<void>;
-    function newPose(character: typeof characters.maleSpider | typeof characters.femaleSpider, mood: "angry" | "sad" | "normal" | "scared" | "happy" | "demon", position?: {
+    function newPose(character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer, mood: "angry" | "sad" | "normal" | "scared" | "happy" | "demon", update?: number, position?: {
         x: number;
         y: number;
-    }, update?: number): Promise<void>;
-    function tell(character: typeof characters.maleSpider | typeof characters.femaleSpider, numberOfDialog: number): Promise<void>;
+    }): Promise<void>;
+    function tell(character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer, numberOfDialog: number | string): Promise<void>;
+    function changeLocation(location: typeof locations.web, transition: typeof transitions.noContent): Promise<void>;
 }
 declare namespace myStory {
     export import ƒ = FudgeCore;
@@ -119,7 +281,7 @@ declare namespace myStory {
             name: string;
             background: string;
         };
-        restaurant_onTable: {
+        restaurant_underTable: {
             name: string;
             background: string;
         };
@@ -128,6 +290,10 @@ declare namespace myStory {
             background: string;
         };
         minivan2: {
+            name: string;
+            background: string;
+        };
+        fly_agaric: {
             name: string;
             background: string;
         };
@@ -166,10 +332,14 @@ declare namespace myStory {
         };
     };
     let characters: {
-        narrator: {
+        mrobeer: {
             name: string;
+            origin: ƒ.ORIGIN2D;
+            pose: {
+                normal: string;
+            };
         };
-        maleSpider: {
+        webster: {
             name: string;
             origin: ƒ.ORIGIN2D;
             pose: {
@@ -180,7 +350,7 @@ declare namespace myStory {
                 scared: string;
             };
         };
-        femaleSpider: {
+        phobia: {
             name: string;
             origin: ƒ.ORIGIN2D;
             pose: {
@@ -197,12 +367,31 @@ declare namespace myStory {
         nameProtagonist: string;
         score: number;
     };
+}
+declare namespace myStory {
+    function AfterRestaurant(): ƒS.SceneReturn;
+}
+declare namespace myStory {
     function showCredits(): void;
-    function changeLocation(location: typeof locations.web, transition: typeof transitions.noContent): Promise<void>;
+}
+declare namespace myStory {
+    function Ending(): ƒS.SceneReturn;
+}
+declare namespace myStory {
+    function FlyAgaric(): ƒS.SceneReturn;
 }
 declare namespace myStory {
     function Intro(): ƒS.SceneReturn;
 }
 declare namespace myStory {
-    function Scene1(): ƒS.SceneReturn;
+    function Restaurant(): ƒS.SceneReturn;
+}
+declare namespace myStory {
+    function ToRestaurant(): ƒS.SceneReturn;
+}
+declare namespace myStory {
+    function VanForrest(): ƒS.SceneReturn;
+}
+declare namespace myStory {
+    function VanForrestOnReturn(): ƒS.SceneReturn;
 }

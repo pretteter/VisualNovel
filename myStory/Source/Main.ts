@@ -10,7 +10,7 @@ namespace myStory {
     x: 25,
     y: 20,
   };
-  export let currentActiveScene:string;
+  export let currentActiveScene: string;
   // transition
   export let transitions = {
     noContent: {
@@ -47,9 +47,10 @@ namespace myStory {
       name: "graveyard",
       background: "/Images/Backgrounds/graveyard.jpg",
     },
-    restaurant_onTable: {
-      name: "graveyard",
-      background: "/Images/Backgrounds/restaurant_onTable.jpg",
+    restaurant_underTable: {
+      name: "restaurant_undertable",
+      background:
+        "/Images/Backgrounds/restaurant_unter_table-studio_cartoon.jpg",
     },
     minivan1: {
       name: "minivan1",
@@ -58,6 +59,10 @@ namespace myStory {
     minivan2: {
       name: "minivan2",
       background: "/Images/Backgrounds/minivan2.jpg",
+    },
+    fly_agaric: {
+      name: "fly agaric",
+      background: "/Images/Backgrounds/forest_mushroom-studio_cartoon.jpg",
     },
   };
 
@@ -96,11 +101,15 @@ namespace myStory {
   };
 
   export let characters = {
-    narrator: {
-      name: "",
+    mrobeer: {
+      name: "Mr. Obeer",
+      origin: ƒS.ORIGIN.BOTTOMCENTER,
+      pose: {
+        normal: "/Images/Characters/bee.png",
+      },
     },
-    maleSpider: {
-      name: "Male",
+    webster: {
+      name: "Webster",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
         angry: "/Images/Characters/maleSpider_angry.png",
@@ -110,8 +119,8 @@ namespace myStory {
         scared: "/Images/Characters/maleSpider_scared.png",
       },
     },
-    femaleSpider: {
-      name: "Female",
+    phobia: {
+      name: "Phobia",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
         angry: "/Images/Characters/femaleSpider_angry.png",
@@ -142,11 +151,6 @@ namespace myStory {
   let menuIsOpen: boolean = true;
   let inventoryOpen: boolean = false;
 
-  export function showCredits() {
-    ƒS.Text.setClass("Moin");
-    ƒS.Text.print("Muuuhhhhh");
-  }
-
   async function buttonFunctions(option: string): Promise<void> {
     switch (option) {
       case inGameMenuButtons.save:
@@ -163,20 +167,6 @@ namespace myStory {
         showCredits();
         break;
     }
-  }
-
-  export async function changeLocation(
-    location: typeof locations.web,
-    transition: typeof transitions.noContent
-  ) {
-    await ƒS.Location.show(location);
-    await ƒS.update(transition.duration, transition.alpha, transition.edge);
-    changeColorTextbox();
-
-    let element = Array.from(
-      document.getElementsByTagName("speech") as HTMLCollectionOf<HTMLElement>
-    )[0];
-    element.style.display = "";
   }
 
   //Shortcuts for Menu
@@ -228,8 +218,28 @@ namespace myStory {
     element.style.display = "none";
 
     let scenes: ƒS.Scenes = [
-      { id: "intro", scene: Intro, name: "Intro", next: "one" },
-      { id: "one", scene: Scene1, name: "Scene" },
+      { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
+      {
+        id: "vanForrest",
+        scene: VanForrest,
+        name: "VanForrest",
+        next: "toRestaurant",
+      },
+      {
+        id: "toRestaurant",
+        scene: ToRestaurant,
+        name: "toRestaurant",
+        next: "restaurant",
+      },
+      {
+        id: "restaurant",
+        scene: Restaurant,
+        name: "Restaurant_under_Table",
+        next: "afterRestaurant",
+      },
+      { id: "afterRestaurant", scene: AfterRestaurant, name: "VanStreet_back" },
+      { id: "ending", scene: Ending, name: "Ending" },
+      { id: "mushroom", scene: FlyAgaric, name: "Mushroom" },
     ];
 
     // start the sequence

@@ -1,7 +1,7 @@
 namespace myStory {
   export async function moveCharacterToLocaton(
-    character: typeof characters.maleSpider | typeof characters.femaleSpider,
-    pose: typeof characters.maleSpider.pose.angry,
+    character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer,
+    pose: typeof characters.webster.pose.angry,
     locationToMove: { x: number; y: number },
     intervallSeconds: number,
     hideAfterReaching?: number
@@ -9,7 +9,7 @@ namespace myStory {
     let x;
     let y;
 
-    if (character.name === characters.maleSpider.name) {
+    if (character.name === characters.webster.name) {
       x = currentMaleCoordinates.x;
       y = currentMaleCoordinates.y;
     } else {
@@ -22,7 +22,7 @@ namespace myStory {
     y > locationToMove.y ? (y -= 1) : "";
     y < locationToMove.y ? (y += 1) : "";
 
-    if (character.name === characters.maleSpider.name) {
+    if (character.name === characters.webster.name) {
       currentMaleCoordinates.x = x;
       currentMaleCoordinates.y = y;
     } else {
@@ -53,16 +53,19 @@ namespace myStory {
   }
 
   export async function newPose(
-    character: typeof characters.maleSpider | typeof characters.femaleSpider,
+    character:
+      | typeof characters.webster
+      | typeof characters.phobia
+      | typeof characters.mrobeer,
     mood: "angry" | "sad" | "normal" | "scared" | "happy" | "demon",
-    position?: { x: number; y: number },
-    update?: number
+    update?: number,
+    position?: { x: number; y: number }
   ) {
     const path = "character.pose." + mood.toString();
     const pose = eval(path);
     if (!position) {
       position = { x: undefined, y: undefined };
-      if (character.name == characters.maleSpider.name) {
+      if (character.name == characters.webster.name) {
         position.x = currentMaleCoordinates.x;
         position.y = currentMaleCoordinates.y;
       } else {
@@ -81,39 +84,61 @@ namespace myStory {
   }
 
   export async function tell(
-    character: typeof characters.maleSpider | typeof characters.femaleSpider,
-    numberOfDialog: number
+    character:
+      | typeof characters.webster
+      | typeof characters.phobia
+      | typeof characters.mrobeer,
+    numberOfDialog: number | string
   ) {
     let path;
-    let stringDialogue: string = "T000";
-
-    if (numberOfDialog >= 10 && numberOfDialog < 100) {
-      stringDialogue = "T00";
-    }
-    switch (character.name) {
-      case characters.maleSpider.name: {
-        path =
-          "myStory.dialogues." +
-          currentActiveScene +
-          ".maleSpider." +
-          stringDialogue +
-          "" +
-          numberOfDialog.toString();
-        break;
+    if (typeof numberOfDialog === "number") {
+      switch (character.name) {
+        case characters.webster.name: {
+          path =
+            "myStory.dialogues." +
+            currentActiveScene +
+            ".webster[" +
+            numberOfDialog.toString() +
+            "]";
+          break;
+        }
+        case characters.phobia.name: {
+          path =
+            "myStory.dialogues." +
+            currentActiveScene +
+            ".femaleSpider[" +
+            numberOfDialog.toString() +
+            "]";
+          break;
+        }
+        case characters.mrobeer.name: {
+          path =
+            "myStory.dialogues." +
+            currentActiveScene +
+            ".obee[" +
+            numberOfDialog.toString() +
+            "]";
+          break;
+        }
       }
-      case characters.femaleSpider.name: {
-        path =
-          "myStory.dialogues." +
-          currentActiveScene +
-          ".femaleSpider.T000" +
-          numberOfDialog.toString();
-        break;
-      }
+      const content = eval(path);
+      await ƒS.Speech.tell(character, content);
+    } else if (typeof numberOfDialog === "string") {
+      await ƒS.Speech.tell(character, numberOfDialog);
     }
-    // dialogues.Intro.maleSpider.T0001;
+  }
 
-    const pose = eval(path);
+  export async function changeLocation(
+    location: typeof locations.web,
+    transition: typeof transitions.noContent
+  ) {
+    await ƒS.Location.show(location);
+    await ƒS.update(transition.duration, transition.alpha, transition.edge);
+    changeColorTextbox();
 
-    await ƒS.Speech.tell(character, pose);
+    let element = Array.from(
+      document.getElementsByTagName("speech") as HTMLCollectionOf<HTMLElement>
+    )[0];
+    element.style.display = "";
   }
 }
