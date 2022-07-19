@@ -86,6 +86,7 @@ namespace myStory {
         1_2_01: "Hmm...",
         1_2_02: "Ich weiß was das werden soll. Aber wieso eigentlich nicht.",
         1_2_03: "Hatte schon lange keinen mehr zum snacken",
+        1_2_04: "Und Spaß hatte ich auch schon lange nicht mehr",
         1_3_01: "Öhm.... Ja gern. Wo ist das?",
         1_3_02: "Dann lass ich mich wohl mal überraschen",
       },
@@ -107,7 +108,7 @@ namespace myStory {
         2: "Was? Wieso?",
         3: "Hmm... So ganz geheuer ist mir das nicht. Ich spinne doch eigentlich schon genug",
         4: "Aber ok. Der Abend war schön. Keinen Grund es jetzt komisch werden zu lassen",
-        5:"Mampf Mampf",
+        5: "Mampf Mampf",
         6: "Irgendwie fühle ich mich komisch. Was ist das?",
         7: "Huhu, Jaahaa....",
         8: "So langsam drifte ich auch ab. Bist du denn schon in deiner Traumwelt?",
@@ -191,7 +192,7 @@ namespace myStory {
       femaleSpider: {
         1: "Jep. Aber lange hätte ich nicht mehr gewartet.",
         2: "Was ist denn passiert? Wieso kommst du erst so spät?",
-        3:"Haha. Ja klar. Da hatte ich das Glück, dass ich noch satt bin"
+        3: "Haha. Ja klar. Da hatte ich das Glück, dass ich noch satt bin",
       },
     },
     Ending: {

@@ -13,6 +13,7 @@ namespace myStory {
     await tell(characters.phobia, 3);
     await newPose(characters.webster, "happy");
     await tell(characters.phobia, 4);
+    ƒS.Sound.play(sounds.moments_later, 0.5);
     await tell(characters.phobia, 5);
     await tell(characters.phobia, 6);
     await tell(characters.webster, 4);
@@ -23,7 +24,7 @@ namespace myStory {
 
     let decitionAnswer = {
       holliday: "Auf einer Liege im Urlaub",
-      city: "In einer Großstadt mit vielen coolen Autos",
+      city: "In einer Großstadt mit vielen geilen Karren",
     };
 
     let decition = await ƒS.Menu.getInput(decitionAnswer, "decision");
@@ -31,12 +32,12 @@ namespace myStory {
     switch (decition) {
       case decitionAnswer.city:
         await tell(characters.webster, 1_1_01);
-        await endOfScene("holliday");
-        break;
+        await clearScene();
+        return "holliday";
       case decitionAnswer.holliday:
         await tell(characters.webster, 1_2_01);
-        await endOfScene("city");
-        break;
+        await clearScene();
+        return "city";
     }
   }
 }

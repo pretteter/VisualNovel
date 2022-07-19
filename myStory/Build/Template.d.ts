@@ -85,6 +85,7 @@ declare namespace myStory {
                 1201: string;
                 1202: string;
                 1203: string;
+                1204: string;
                 1301: string;
                 1302: string;
             };
@@ -239,7 +240,7 @@ declare namespace myStory {
     }): Promise<void>;
     function tell(character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer, numberOfDialog: number | string): Promise<void>;
     function changeLocation(location: typeof locations.web, transition: typeof transitions.noContent): Promise<void>;
-    function endOfScene(sceneToJump?: string): Promise<string>;
+    function clearScene(): Promise<void>;
 }
 declare namespace myStory {
     export import ƒ = FudgeCore;
@@ -271,15 +272,23 @@ declare namespace myStory {
         };
     };
     let sounds: {
-        nightclub: string;
-        click: string;
+        wakeup: string;
+        explore: string;
+        city: string;
+        holliday: string;
+        restaurant_people: string;
+        restaurant_jazz: string;
+        car_interior: string;
+        dramatic: string;
+        love: string;
+        drums: string;
+        car_door_open: string;
+        car_door_close: string;
+        moments_later: string;
+        suspense: string;
     };
     let locations: {
         web: {
-            name: string;
-            background: string;
-        };
-        graveyard: {
             name: string;
             background: string;
         };
@@ -287,15 +296,27 @@ declare namespace myStory {
             name: string;
             background: string;
         };
-        minivan1: {
+        minivan_city: {
             name: string;
             background: string;
         };
-        minivan2: {
+        minivan_forrest: {
             name: string;
             background: string;
         };
         mushroom: {
+            name: string;
+            background: string;
+        };
+        swing: {
+            name: string;
+            background: string;
+        };
+        city: {
+            name: string;
+            background: string;
+        };
+        holliday: {
             name: string;
             background: string;
         };
@@ -344,6 +365,9 @@ declare namespace myStory {
     function AfterRestaurant(): ƒS.SceneReturn;
 }
 declare namespace myStory {
+    function City(): ƒS.SceneReturn;
+}
+declare namespace myStory {
     function Ending(): ƒS.SceneReturn;
 }
 declare namespace myStory {
@@ -354,6 +378,9 @@ declare namespace myStory {
 }
 declare namespace myStory {
     function Restaurant(): ƒS.SceneReturn;
+}
+declare namespace myStory {
+    function Swing(): ƒS.SceneReturn;
 }
 declare namespace myStory {
     function ToRestaurant(): ƒS.SceneReturn;

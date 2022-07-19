@@ -22,7 +22,7 @@ namespace myStory {
 
     // ƒS.Inventory.add(items.item1);
 
-    await changeLocation(locations.minivan2, transitions.test);
+    await changeLocation(locations.minivan_forrest, transitions.test);
 
     await newPose(characters.webster, "normal", 0);
     await newPose(characters.phobia, "normal", 0);
@@ -33,6 +33,7 @@ namespace myStory {
     await tell(characters.webster, 3);
     await tell(characters.phobia, 3);
     await tell(characters.webster, 4);
+   ƒS.Sound.play(sounds.car_door_open, 0.5);
     await moveCharacterToLocaton(
       characters.phobia,
       characters.phobia.pose.happy,
@@ -43,6 +44,7 @@ namespace myStory {
       0.025,
       1
     );
+     ƒS.Sound.play(sounds.car_door_close, 0.5);
     await moveCharacterToLocaton(
       characters.webster,
       characters.webster.pose.happy,
@@ -53,7 +55,9 @@ namespace myStory {
       0.025,
       1
     );
-    await endOfScene();
+    ƒS.Sound.play(sounds.car_door_close, 0.5);
+    ƒS.Sound.fade(sounds.wakeup, 0, 0.5, true);
+    await clearScene();
 
     // ƒS.Sound.play(sounds.nightclub, 0.5);
     // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);

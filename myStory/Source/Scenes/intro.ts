@@ -1,9 +1,8 @@
 namespace myStory {
   export async function Intro(): ƒS.SceneReturn {
     currentActiveScene = "Intro";
-    // ƒS.Sound.play(sounds.nightclub, 0.5);
-    // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);
-
+    // ƒS.Sound.play(sounds.wakeup, 0.5, true);
+    ƒS.Sound.fade(sounds.wakeup, 0.3, 2, true);
     // for (let key of Object.values(items)) {
     //   ƒS.Inventory.add(key);
     // }
@@ -19,10 +18,9 @@ namespace myStory {
 
     await changeLocation(locations.web, transitions.test);
     await newPose(characters.webster, "normal");
-
     await tell(characters.webster, 1);
     await tell(characters.webster, 2);
-
+    ƒS.Sound.fade(sounds.drums, 0.4, 0);
     await newPose(characters.phobia, "scared");
     await newPose(characters.webster, "scared");
     // await ƒS.Character.animate(characters.phobia,characters.phobia.pose.scared)
@@ -38,6 +36,7 @@ namespace myStory {
     );
     await tell(characters.phobia, 1);
     await newPose(characters.phobia, "angry");
+    ƒS.Sound.fade(sounds.drums, 0, 0.5);
     await tell(characters.phobia, 2);
     await newPose(characters.webster, "normal");
     await newPose(characters.phobia, "sad");
@@ -79,8 +78,7 @@ namespace myStory {
     // ƒS.Speech.clear();
     // await ƒS.Character.hideAll();
     // await ƒS.update();
-
-    await endOfScene();
+    await clearScene();
 
     // ƒS.Sound.play(sounds.nightclub, 0.5);
     // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);

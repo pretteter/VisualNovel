@@ -3,7 +3,8 @@ namespace myStory {
     currentActiveScene = "Restaurant";
     currentFemaleCoordinates = { x: 20, y: 85 };
     currentMaleCoordinates = { x: 75, y: 80 };
-
+    ƒS.Sound.fade(sounds.restaurant_people, 0.3, 2, true);
+    ƒS.Sound.fade(sounds.restaurant_jazz, 0.2, 2, true);
     await changeLocation(locations.restaurant_underTable, transitions.test);
     await newPose(characters.webster, "happy", 0);
     await newPose(characters.phobia, "normal", 0);
@@ -26,7 +27,8 @@ namespace myStory {
 
       case decitionAnswer.iSayYes:
     }
-
-    await endOfScene();
+    ƒS.Sound.fade(sounds.restaurant_people, 0, 0.5);
+    ƒS.Sound.fade(sounds.restaurant_jazz, 0, 0.5);
+    await clearScene();
   }
 }

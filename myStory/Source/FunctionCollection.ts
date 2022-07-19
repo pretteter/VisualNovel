@@ -145,13 +145,9 @@ namespace myStory {
     element.style.display = "";
   }
 
-  export async function endOfScene(sceneToJump?: string) {
+  export async function clearScene() {
     ƒS.Speech.clear();
     await ƒS.Character.hideAll();
     await ƒS.update();
-    if (sceneToJump) return sceneToJump;
-    else {
-      return undefined;
-    }
   }
 }

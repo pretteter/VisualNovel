@@ -87,6 +87,7 @@ var myStory;
                 1_2_01: "Hmm...",
                 1_2_02: "Ich weiß was das werden soll. Aber wieso eigentlich nicht.",
                 1_2_03: "Hatte schon lange keinen mehr zum snacken",
+                1_2_04: "Und Spaß hatte ich auch schon lange nicht mehr",
                 1_3_01: "Öhm.... Ja gern. Wo ist das?",
                 1_3_02: "Dann lass ich mich wohl mal überraschen",
             },
@@ -185,7 +186,7 @@ var myStory;
             femaleSpider: {
                 1: "Jep. Aber lange hätte ich nicht mehr gewartet.",
                 2: "Was ist denn passiert? Wieso kommst du erst so spät?",
-                3: "Haha. Ja klar. Da hatte ich das Glück, dass ich noch satt bin"
+                3: "Haha. Ja klar. Da hatte ich das Glück, dass ich noch satt bin",
             },
         },
         Ending: {
@@ -450,17 +451,12 @@ var myStory;
         element.style.display = "";
     }
     myStory.changeLocation = changeLocation;
-    async function endOfScene(sceneToJump) {
+    async function clearScene() {
         myStory.ƒS.Speech.clear();
         await myStory.ƒS.Character.hideAll();
         await myStory.ƒS.update();
-        if (sceneToJump)
-            return sceneToJump;
-        else {
-            return undefined;
-        }
     }
-    myStory.endOfScene = endOfScene;
+    myStory.clearScene = clearScene;
 })(myStory || (myStory = {}));
 var myStory;
 (function (myStory) {
@@ -494,34 +490,58 @@ var myStory;
     };
     myStory.sounds = {
         // theme
-        nightclub: "Pfad",
+        wakeup: "Sounds/Sad_and_Sweet/wakeup.mp3",
+        explore: "Sounds/Humorus_lighthearted/exploring.mp3",
+        city: "Sounds/Busy City Street.mp3",
+        holliday: "Sounds/- 13 - The Lost Island.mp3",
+        restaurant_people: "Sounds/Coffee Shop.mp3",
+        restaurant_jazz: "Sounds/jazz trio.mp3",
+        car_interior: "Sounds/Car Interior.mp3",
+        dramatic: "Sounds/Army of Death (looped).wav",
+        love: "Sounds/Sad_and_Sweet/love and secrets.mp3",
         // soundeffects
-        click: "Pfad",
+        drums: "Sounds/drum_beats_and_loops/drumbeat.wav",
+        car_door_open: "Sounds/Effects/truck_door_open.wav",
+        car_door_close: "Sounds/Effects/Car door.wav",
+        moments_later: "Sounds/Effects/SPONGEBOB TIME CARDS - A FEW MOMENTS LATER.mp3",
+        suspense: "Sounds/Effects/Suspense.mp3",
     };
     myStory.locations = {
         web: {
             name: "web",
             background: "Images/Backgrounds/spiderweb.jpg",
         },
-        graveyard: {
-            name: "graveyard",
-            background: "Images/Backgrounds/graveyard.jpg",
-        },
+        // graveyard: {
+        //   name: "graveyard",
+        //   background: "Images/Backgrounds/graveyard.jpg",
+        // },
         restaurant_underTable: {
             name: "restaurant_undertable",
             background: "Images/Backgrounds/restaurant_unter_table-studio_cartoon.jpg",
         },
-        minivan1: {
+        minivan_city: {
             name: "minivan1",
             background: "Images/Backgrounds/minivan1.jpg",
         },
-        minivan2: {
+        minivan_forrest: {
             name: "minivan2",
             background: "Images/Backgrounds/minivan2.jpg",
         },
         mushroom: {
             name: "fly agaric",
             background: "Images/Backgrounds/forest_mushroom-studio_cartoon.jpg",
+        },
+        swing: {
+            name: "swing",
+            background: "Images/Backgrounds/schaukel.jpg",
+        },
+        city: {
+            name: "city",
+            background: "Images/Backgrounds/city.jpg",
+        },
+        holliday: {
+            name: "holliday",
+            background: "Images/Backgrounds/holliday.jpg",
         },
     };
     // export let items = {
@@ -666,28 +686,33 @@ var myStory;
         let element = Array.from(document.getElementsByTagName("speech"))[0];
         element.style.display = "none";
         let scenes = [
-            { id: "intro", scene: myStory.Intro, name: "Intro", next: "vanForrest" },
-            {
-                id: "vanForrest",
-                scene: myStory.VanForrest,
-                name: "VanForrest",
-                next: "toRestaurant",
-            },
-            {
-                id: "toRestaurant",
-                scene: myStory.ToRestaurant,
-                name: "toRestaurant",
-                next: "restaurant",
-            },
-            {
-                id: "restaurant",
-                scene: myStory.Restaurant,
-                name: "Restaurant_under_Table",
-                next: "afterRestaurant",
-            },
+            // { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
+            // {
+            //   id: "vanForrest",
+            //   scene: VanForrest,
+            //   name: "VanForrest",
+            //   next: "toRestaurant",
+            // },
+            // {
+            //   id: "toRestaurant",
+            //   scene: ToRestaurant,
+            //   name: "toRestaurant",
+            //   next: "restaurant",
+            // },
+            // {
+            //   id: "restaurant",
+            //   scene: Restaurant,
+            //   name: "Restaurant_under_Table",
+            //   next: "afterRestaurant",
+            // },
             { id: "afterRestaurant", scene: myStory.AfterRestaurant, name: "VanStreet_back" },
-            { id: "vanForrestOnReturn", scene: myStory.VanForrestOnReturn, name: "Van in front of Home" },
+            {
+                id: "vanForrestOnReturn",
+                scene: myStory.VanForrestOnReturn,
+                name: "Van in front of Home",
+            },
             { id: "mushroom", scene: myStory.Mushroom, name: "Mushroom" },
+            { id: "swing", scene: myStory.Swing, name: "Ending" },
             { id: "ending", scene: myStory.Ending, name: "Ending" },
         ];
         // start the sequence
@@ -737,8 +762,10 @@ var myStory;
 var myStory;
 (function (myStory) {
     async function AfterRestaurant() {
-        await myStory.changeLocation(myStory.locations.minivan1, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.minivan_city, myStory.transitions.test);
         myStory.currentActiveScene = "AfterRestaurant";
+        myStory.ƒS.Sound.fade(myStory.sounds.love, 0.3, 0, true);
+        myStory.ƒS.Sound.fade(myStory.sounds.car_interior, 0.8, 1, true);
         myStory.currentFemaleCoordinates.x = 50;
         myStory.currentFemaleCoordinates.y = 90;
         myStory.currentMaleCoordinates.x = 50;
@@ -754,16 +781,16 @@ var myStory;
         switch (decition1) {
             case decitionAnswer.home:
                 await dialogueHome();
-                await myStory.endOfScene("vanForrestOnReturn");
-                break;
+                await myStory.clearScene();
+                return "vanForrestOnReturn";
             case decitionAnswer.romantic:
                 await dialogueRomantic();
-                await myStory.endOfScene("ending");
-                break;
+                await myStory.clearScene();
+                return "ending";
             case decitionAnswer.doSomething:
                 await dialogueMushroom();
-                await myStory.endOfScene("mushroom");
-                break;
+                await myStory.clearScene();
+                return "mushroom";
         }
         myStory.ƒS.Speech.clear();
         await myStory.ƒS.update();
@@ -773,26 +800,47 @@ var myStory;
         await myStory.tell(myStory.characters.webster, 1_1_01);
         await myStory.tell(myStory.characters.phobia, 1_1_01);
         await myStory.tell(myStory.characters.webster, 1_1_02);
+        stopSound();
     }
     async function dialogueRomantic() {
         await myStory.tell(myStory.characters.webster, 1_2_01);
         await myStory.tell(myStory.characters.phobia, 1_2_01);
         await myStory.tell(myStory.characters.phobia, 1_2_02);
+        myStory.ƒS.Sound.play(myStory.sounds.suspense, 0.4);
+        await myStory.newPose(myStory.characters.phobia, "demon");
         await myStory.tell(myStory.characters.phobia, 1_2_03);
+        await myStory.clearScene();
+        await myStory.tell(myStory.characters.phobia, 1_2_04);
+        stopSound();
     }
     async function dialogueMushroom() {
         await myStory.tell(myStory.characters.webster, 1_3_01);
         await myStory.tell(myStory.characters.phobia, 1_3_01);
         await myStory.tell(myStory.characters.webster, 1_3_02);
         await myStory.tell(myStory.characters.phobia, 1_3_02);
+        stopSound();
     }
+    function stopSound() {
+        myStory.ƒS.Sound.fade(myStory.sounds.love, 0, 0.5);
+        myStory.ƒS.Sound.fade(myStory.sounds.car_interior, 0, 0.5);
+    }
+})(myStory || (myStory = {}));
+var myStory;
+(function (myStory) {
+    async function City() {
+        myStory.currentActiveScene = "City";
+        myStory.ƒS.Sound.fade(myStory.sounds.city, 0.3, 2, true);
+        myStory.ƒS.Sound.fade(myStory.sounds.city, 0, 0.5);
+        await myStory.clearScene();
+    }
+    myStory.City = City;
 })(myStory || (myStory = {}));
 var myStory;
 (function (myStory) {
     async function Ending() {
         myStory.currentActiveScene = "Ending";
         await myStory.changeLocation(myStory.locations.web, myStory.transitions.test);
-        await myStory.endOfScene();
+        await myStory.clearScene();
     }
     myStory.Ending = Ending;
 })(myStory || (myStory = {}));
@@ -800,8 +848,8 @@ var myStory;
 (function (myStory) {
     async function Intro() {
         myStory.currentActiveScene = "Intro";
-        // ƒS.Sound.play(sounds.nightclub, 0.5);
-        // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);
+        // ƒS.Sound.play(sounds.wakeup, 0.5, true);
+        myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0.3, 2, true);
         // for (let key of Object.values(items)) {
         //   ƒS.Inventory.add(key);
         // }
@@ -816,6 +864,7 @@ var myStory;
         await myStory.newPose(myStory.characters.webster, "normal");
         await myStory.tell(myStory.characters.webster, 1);
         await myStory.tell(myStory.characters.webster, 2);
+        myStory.ƒS.Sound.fade(myStory.sounds.drums, 0.4, 0);
         await myStory.newPose(myStory.characters.phobia, "scared");
         await myStory.newPose(myStory.characters.webster, "scared");
         // await ƒS.Character.animate(characters.phobia,characters.phobia.pose.scared)
@@ -825,6 +874,7 @@ var myStory;
         }, 0.0025, 0);
         await myStory.tell(myStory.characters.phobia, 1);
         await myStory.newPose(myStory.characters.phobia, "angry");
+        myStory.ƒS.Sound.fade(myStory.sounds.drums, 0, 0.5);
         await myStory.tell(myStory.characters.phobia, 2);
         await myStory.newPose(myStory.characters.webster, "normal");
         await myStory.newPose(myStory.characters.phobia, "sad");
@@ -855,7 +905,7 @@ var myStory;
         // ƒS.Speech.clear();
         // await ƒS.Character.hideAll();
         // await ƒS.update();
-        await myStory.endOfScene();
+        await myStory.clearScene();
         // ƒS.Sound.play(sounds.nightclub, 0.5);
         // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);
         // let decitionAnswer = {
@@ -887,6 +937,7 @@ var myStory;
         await myStory.tell(myStory.characters.phobia, 3);
         await myStory.newPose(myStory.characters.webster, "happy");
         await myStory.tell(myStory.characters.phobia, 4);
+        myStory.ƒS.Sound.play(myStory.sounds.moments_later, 0.5);
         await myStory.tell(myStory.characters.phobia, 5);
         await myStory.tell(myStory.characters.phobia, 6);
         await myStory.tell(myStory.characters.webster, 4);
@@ -896,18 +947,18 @@ var myStory;
         await myStory.tell(myStory.characters.phobia, 8);
         let decitionAnswer = {
             holliday: "Auf einer Liege im Urlaub",
-            city: "In einer Großstadt mit vielen coolen Autos",
+            city: "In einer Großstadt mit vielen geilen Karren",
         };
         let decition = await myStory.ƒS.Menu.getInput(decitionAnswer, "decision");
         switch (decition) {
             case decitionAnswer.city:
                 await myStory.tell(myStory.characters.webster, 1_1_01);
-                await myStory.endOfScene("holliday");
-                break;
+                await myStory.clearScene();
+                return "holliday";
             case decitionAnswer.holliday:
                 await myStory.tell(myStory.characters.webster, 1_2_01);
-                await myStory.endOfScene("city");
-                break;
+                await myStory.clearScene();
+                return "city";
         }
     }
     myStory.Mushroom = Mushroom;
@@ -918,6 +969,8 @@ var myStory;
         myStory.currentActiveScene = "Restaurant";
         myStory.currentFemaleCoordinates = { x: 20, y: 85 };
         myStory.currentMaleCoordinates = { x: 75, y: 80 };
+        myStory.ƒS.Sound.fade(myStory.sounds.restaurant_people, 0.3, 2, true);
+        myStory.ƒS.Sound.fade(myStory.sounds.restaurant_jazz, 0.2, 2, true);
         await myStory.changeLocation(myStory.locations.restaurant_underTable, myStory.transitions.test);
         await myStory.newPose(myStory.characters.webster, "happy", 0);
         await myStory.newPose(myStory.characters.phobia, "normal", 0);
@@ -934,17 +987,31 @@ var myStory;
             case decitionAnswer.iSayOk:
             case decitionAnswer.iSayYes:
         }
-        await myStory.endOfScene();
+        myStory.ƒS.Sound.fade(myStory.sounds.restaurant_people, 0, 0.5);
+        myStory.ƒS.Sound.fade(myStory.sounds.restaurant_jazz, 0, 0.5);
+        await myStory.clearScene();
     }
     myStory.Restaurant = Restaurant;
 })(myStory || (myStory = {}));
 var myStory;
 (function (myStory) {
-    async function ToRestaurant() {
-        myStory.currentActiveScene = "ToRestaurant";
-        await myStory.changeLocation(myStory.locations.minivan1, myStory.transitions.test);
+    async function Swing() {
+        myStory.currentActiveScene = "Swing";
+        await myStory.changeLocation(myStory.locations.swing, myStory.transitions.test);
         await myStory.tell(myStory.characters.phobia, 1);
         await myStory.tell(myStory.characters.webster, 1);
+    }
+    myStory.Swing = Swing;
+})(myStory || (myStory = {}));
+var myStory;
+(function (myStory) {
+    async function ToRestaurant() {
+        myStory.currentActiveScene = "ToRestaurant";
+        myStory.ƒS.Sound.fade(myStory.sounds.explore, 0.3, 2, true);
+        await myStory.changeLocation(myStory.locations.minivan_city, myStory.transitions.test);
+        await myStory.tell(myStory.characters.phobia, 1);
+        await myStory.tell(myStory.characters.webster, 1);
+        myStory.ƒS.Sound.play(myStory.sounds.car_door_open, 0.5);
         await myStory.moveCharacterToLocaton(myStory.characters.webster, myStory.characters.webster.pose.happy, {
             x: 75,
             y: 80,
@@ -958,6 +1025,7 @@ var myStory;
             x: 27,
             y: 85,
         }, 0.0005, 0);
+        myStory.ƒS.Sound.play(myStory.sounds.car_door_open, 0.5);
         await myStory.tell(myStory.characters.webster, 3);
         await myStory.moveCharacterToLocaton(myStory.characters.webster, myStory.characters.webster.pose.happy, {
             x: 37,
@@ -967,6 +1035,7 @@ var myStory;
             x: 75,
             y: 80,
         }, 0.0005, 0);
+        myStory.ƒS.Sound.play(myStory.sounds.car_door_close, 0.5);
         myStory.moveCharacterToLocaton(myStory.characters.phobia, myStory.characters.phobia.pose.happy, {
             x: 20,
             y: 90,
@@ -974,7 +1043,8 @@ var myStory;
         await myStory.tell(myStory.characters.phobia, 2);
         await myStory.tell(myStory.characters.webster, 4);
         await myStory.tell(myStory.characters.phobia, 3);
-        await myStory.endOfScene();
+        myStory.ƒS.Sound.fade(myStory.sounds.explore, 0, 1);
+        await myStory.clearScene();
     }
     myStory.ToRestaurant = ToRestaurant;
 })(myStory || (myStory = {}));
@@ -998,7 +1068,7 @@ var myStory;
         //   ƒS.Inventory.add(key);
         // }
         // ƒS.Inventory.add(items.item1);
-        await myStory.changeLocation(myStory.locations.minivan2, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.minivan_forrest, myStory.transitions.test);
         await myStory.newPose(myStory.characters.webster, "normal", 0);
         await myStory.newPose(myStory.characters.phobia, "normal", 0);
         await myStory.tell(myStory.characters.phobia, 1);
@@ -1008,15 +1078,19 @@ var myStory;
         await myStory.tell(myStory.characters.webster, 3);
         await myStory.tell(myStory.characters.phobia, 3);
         await myStory.tell(myStory.characters.webster, 4);
+        myStory.ƒS.Sound.play(myStory.sounds.car_door_open, 0.5);
         await myStory.moveCharacterToLocaton(myStory.characters.phobia, myStory.characters.phobia.pose.happy, {
             x: 50,
             y: 90,
         }, 0.025, 1);
+        myStory.ƒS.Sound.play(myStory.sounds.car_door_close, 0.5);
         await myStory.moveCharacterToLocaton(myStory.characters.webster, myStory.characters.webster.pose.happy, {
             x: 50,
             y: 85,
         }, 0.025, 1);
-        await myStory.endOfScene();
+        myStory.ƒS.Sound.play(myStory.sounds.car_door_close, 0.5);
+        myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0, 0.5, true);
+        await myStory.clearScene();
         // ƒS.Sound.play(sounds.nightclub, 0.5);
         // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);
     }
@@ -1026,7 +1100,7 @@ var myStory;
 (function (myStory) {
     async function VanForrestOnReturn() {
         myStory.currentActiveScene = "VanForrestOnReturn";
-        await myStory.changeLocation(myStory.locations.minivan2, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.minivan_forrest, myStory.transitions.test);
         await myStory.tell(myStory.characters.phobia, 1);
         await myStory.tell(myStory.characters.webster, 1);
         // await newPose(characters.maleSpider, "happy",1);
@@ -1047,16 +1121,16 @@ var myStory;
         switch (decition1) {
             case decitionAnswer.upstairs:
                 await dialogueUpstairs();
-                await myStory.endOfScene("ending");
-                break;
+                await myStory.clearScene();
+                return "ending";
             case decitionAnswer.tomorrow:
                 await dialogueMeetTomorrow();
-                await myStory.endOfScene("swing");
-                break;
+                await myStory.clearScene();
+                return "swing";
             case decitionAnswer.sometimes:
                 await dialogueWhenNextMeeting();
-                await myStory.endOfScene("swing");
-                break;
+                await myStory.clearScene();
+                return "swing";
         }
     }
     myStory.VanForrestOnReturn = VanForrestOnReturn;

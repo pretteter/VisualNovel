@@ -32,10 +32,23 @@ namespace myStory {
 
   export let sounds = {
     // theme
-    nightclub: "Pfad",
+    wakeup: "Sounds/Sad_and_Sweet/wakeup.mp3",
+    explore: "Sounds/Humorus_lighthearted/exploring.mp3",
+    city: "Sounds/Busy City Street.mp3",
+    holliday: "Sounds/- 13 - The Lost Island.mp3",
+    restaurant_people: "Sounds/Coffee Shop.mp3",
+    restaurant_jazz: "Sounds/jazz trio.mp3",
+    car_interior: "Sounds/Car Interior.mp3",
+    dramatic: "Sounds/Army of Death (looped).wav",
+    love: "Sounds/Sad_and_Sweet/love and secrets.mp3",
 
     // soundeffects
-    click: "Pfad",
+    drums: "Sounds/drum_beats_and_loops/drumbeat.wav",
+    car_door_open: "Sounds/Effects/truck_door_open.wav",
+    car_door_close: "Sounds/Effects/Car door.wav",
+    moments_later:
+      "Sounds/Effects/SPONGEBOB TIME CARDS - A FEW MOMENTS LATER.mp3",
+    suspense: "Sounds/Effects/Suspense.mp3",
   };
 
   export let locations = {
@@ -43,26 +56,38 @@ namespace myStory {
       name: "web",
       background: "Images/Backgrounds/spiderweb.jpg",
     },
-    graveyard: {
-      name: "graveyard",
-      background: "Images/Backgrounds/graveyard.jpg",
-    },
+    // graveyard: {
+    //   name: "graveyard",
+    //   background: "Images/Backgrounds/graveyard.jpg",
+    // },
     restaurant_underTable: {
       name: "restaurant_undertable",
       background:
         "Images/Backgrounds/restaurant_unter_table-studio_cartoon.jpg",
     },
-    minivan1: {
+    minivan_city: {
       name: "minivan1",
       background: "Images/Backgrounds/minivan1.jpg",
     },
-    minivan2: {
+    minivan_forrest: {
       name: "minivan2",
       background: "Images/Backgrounds/minivan2.jpg",
     },
     mushroom: {
       name: "fly agaric",
       background: "Images/Backgrounds/forest_mushroom-studio_cartoon.jpg",
+    },
+    swing: {
+      name: "swing",
+      background: "Images/Backgrounds/schaukel.jpg",
+    },
+    city: {
+      name: "city",
+      background: "Images/Backgrounds/city.jpg",
+    },
+    holliday: {
+      name: "holliday",
+      background: "Images/Backgrounds/holliday.jpg",
     },
   };
 
@@ -218,28 +243,33 @@ namespace myStory {
     element.style.display = "none";
 
     let scenes: ƒS.Scenes = [
-      { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
-      {
-        id: "vanForrest",
-        scene: VanForrest,
-        name: "VanForrest",
-        next: "toRestaurant",
-      },
-      {
-        id: "toRestaurant",
-        scene: ToRestaurant,
-        name: "toRestaurant",
-        next: "restaurant",
-      },
-      {
-        id: "restaurant",
-        scene: Restaurant,
-        name: "Restaurant_under_Table",
-        next: "afterRestaurant",
-      },
+      // { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
+      // {
+      //   id: "vanForrest",
+      //   scene: VanForrest,
+      //   name: "VanForrest",
+      //   next: "toRestaurant",
+      // },
+      // {
+      //   id: "toRestaurant",
+      //   scene: ToRestaurant,
+      //   name: "toRestaurant",
+      //   next: "restaurant",
+      // },
+      // {
+      //   id: "restaurant",
+      //   scene: Restaurant,
+      //   name: "Restaurant_under_Table",
+      //   next: "afterRestaurant",
+      // },
       { id: "afterRestaurant", scene: AfterRestaurant, name: "VanStreet_back" },
-      { id: "vanForrestOnReturn", scene: VanForrestOnReturn, name: "Van in front of Home" },
+      {
+        id: "vanForrestOnReturn",
+        scene: VanForrestOnReturn,
+        name: "Van in front of Home",
+      },
       { id: "mushroom", scene: Mushroom, name: "Mushroom" },
+      { id: "swing", scene: Swing, name: "Ending" },
       { id: "ending", scene: Ending, name: "Ending" },
     ];
 

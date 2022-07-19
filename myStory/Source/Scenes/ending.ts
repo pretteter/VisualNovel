@@ -5,6 +5,6 @@ namespace myStory {
     
     
     
-    await endOfScene();
+    await clearScene();
   }
 }

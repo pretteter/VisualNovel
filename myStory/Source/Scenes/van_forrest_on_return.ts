@@ -1,7 +1,7 @@
 namespace myStory {
   export async function VanForrestOnReturn(): ƒS.SceneReturn {
     currentActiveScene = "VanForrestOnReturn";
-    await changeLocation(locations.minivan2, transitions.test);
+    await changeLocation(locations.minivan_forrest, transitions.test);
     await tell(characters.phobia, 1);
     await tell(characters.webster, 1);
     // await newPose(characters.maleSpider, "happy",1);
@@ -35,16 +35,16 @@ namespace myStory {
     switch (decition1) {
       case decitionAnswer.upstairs:
         await dialogueUpstairs();
-        await endOfScene("ending");
-        break;
+        await clearScene();
+        return "ending";
       case decitionAnswer.tomorrow:
         await dialogueMeetTomorrow();
-        await endOfScene("swing");
-        break;
+        await clearScene();
+        return "swing";
       case decitionAnswer.sometimes:
         await dialogueWhenNextMeeting();
-        await endOfScene("swing");
-        break;
+        await clearScene();
+        return "swing";
     }
   }
   async function dialogueUpstairs() {
