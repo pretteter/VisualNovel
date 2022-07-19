@@ -686,25 +686,25 @@ var myStory;
         let element = Array.from(document.getElementsByTagName("speech"))[0];
         element.style.display = "none";
         let scenes = [
-            // { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
-            // {
-            //   id: "vanForrest",
-            //   scene: VanForrest,
-            //   name: "VanForrest",
-            //   next: "toRestaurant",
-            // },
-            // {
-            //   id: "toRestaurant",
-            //   scene: ToRestaurant,
-            //   name: "toRestaurant",
-            //   next: "restaurant",
-            // },
-            // {
-            //   id: "restaurant",
-            //   scene: Restaurant,
-            //   name: "Restaurant_under_Table",
-            //   next: "afterRestaurant",
-            // },
+            { id: "intro", scene: myStory.Intro, name: "Intro", next: "vanForrest" },
+            {
+                id: "vanForrest",
+                scene: myStory.VanForrest,
+                name: "VanForrest",
+                next: "toRestaurant",
+            },
+            {
+                id: "toRestaurant",
+                scene: myStory.ToRestaurant,
+                name: "toRestaurant",
+                next: "restaurant",
+            },
+            {
+                id: "restaurant",
+                scene: myStory.Restaurant,
+                name: "Restaurant_under_Table",
+                next: "afterRestaurant",
+            },
             { id: "afterRestaurant", scene: myStory.AfterRestaurant, name: "VanStreet_back" },
             {
                 id: "vanForrestOnReturn",

@@ -243,25 +243,25 @@ namespace myStory {
     element.style.display = "none";
 
     let scenes: ƒS.Scenes = [
-      // { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
-      // {
-      //   id: "vanForrest",
-      //   scene: VanForrest,
-      //   name: "VanForrest",
-      //   next: "toRestaurant",
-      // },
-      // {
-      //   id: "toRestaurant",
-      //   scene: ToRestaurant,
-      //   name: "toRestaurant",
-      //   next: "restaurant",
-      // },
-      // {
-      //   id: "restaurant",
-      //   scene: Restaurant,
-      //   name: "Restaurant_under_Table",
-      //   next: "afterRestaurant",
-      // },
+      { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
+      {
+        id: "vanForrest",
+        scene: VanForrest,
+        name: "VanForrest",
+        next: "toRestaurant",
+      },
+      {
+        id: "toRestaurant",
+        scene: ToRestaurant,
+        name: "toRestaurant",
+        next: "restaurant",
+      },
+      {
+        id: "restaurant",
+        scene: Restaurant,
+        name: "Restaurant_under_Table",
+        next: "afterRestaurant",
+      },
       { id: "afterRestaurant", scene: AfterRestaurant, name: "VanStreet_back" },
       {
         id: "vanForrestOnReturn",
