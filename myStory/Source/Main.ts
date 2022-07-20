@@ -19,7 +19,7 @@ namespace myStory {
       edge: 0,
     },
     puzzle: {
-      duration: 1,
+      duration: 3,
       alpha: "Images/FreeTransitions/JigsawThemedTransitions/puzzle.png",
       edge: 1,
     },
@@ -40,7 +40,9 @@ namespace myStory {
     car_interior: "Sounds/Car Interior.mp3",
     dramatic: "Sounds/Army of Death (looped).wav",
     love: "Sounds/Sad_and_Sweet/love and secrets.mp3",
-    drugs: "/Sounds/17-Dark Fantasy Studio- Joke.mp3",
+    drugs: "Sounds/17-Dark Fantasy Studio- Joke.mp3",
+    funnyMeme: "Sounds/Humorus_lighthearted/the_funny_mime.mp3",
+    endTheme: "Sounds/Medieval Theme.wav",
 
     // soundeffects
     drums: "Sounds/drum_beats_and_loops/drumbeat.wav",
@@ -49,6 +51,9 @@ namespace myStory {
     moments_later:
       "Sounds/Effects/SPONGEBOB TIME CARDS - A FEW MOMENTS LATER.mp3",
     suspense: "Sounds/Effects/Suspense.mp3",
+    bloodSpill: "Sounds/Effects/blood_guts_spill.wav",
+    bloodHit: "Sounds/Effects/Blood_Hit.wav",
+    scaryShort: "Sounds/Effects/Suspense short.mp3",
   };
 
   export let locations = {
@@ -56,10 +61,10 @@ namespace myStory {
       name: "web",
       background: "Images/Backgrounds/spiderweb.jpg",
     },
-    // graveyard: {
-    //   name: "graveyard",
-    //   background: "Images/Backgrounds/graveyard.jpg",
-    // },
+    graveyard: {
+      name: "graveyard",
+      background: "Images/Backgrounds/graveyard.jpg",
+    },
     restaurant_underTable: {
       name: "restaurant_undertable",
       background:
@@ -88,6 +93,10 @@ namespace myStory {
     holliday: {
       name: "holliday",
       background: "Images/Backgrounds/holliday.jpg",
+    },
+    flower: {
+      name: "flower",
+      background: "/Images/Backgrounds/flower.jpg",
     },
   };
 
@@ -159,7 +168,6 @@ namespace myStory {
   };
 
   export let dataForSave = {
-    nameProtagonist: "",
     score: 0,
   };
 
@@ -168,12 +176,14 @@ namespace myStory {
   let inGameMenuButtons = {
     save: "Save",
     load: "Laden",
-    close: "Schließen",
     credits: "Credits",
+    showLoveMeter: "Liebesstand?",
+    close: "Schließen",
   };
 
   let gameMenu: ƒS.Menu;
   let menuIsOpen: boolean = true;
+  let isLoveMeterShowed: boolean = false;
   // let inventoryOpen: boolean = false;
 
   async function buttonFunctions(option: string): Promise<void> {
@@ -187,6 +197,15 @@ namespace myStory {
       case inGameMenuButtons.close:
         gameMenu.close();
         menuIsOpen = false;
+        break;
+      case inGameMenuButtons.showLoveMeter:
+        if (isLoveMeterShowed) {
+          hideLoveMeter();
+          isLoveMeterShowed = false;
+        } else {
+          showLoveMeter();
+          isLoveMeterShowed = true;
+        }
         break;
       case inGameMenuButtons.credits:
         showCredits();
@@ -244,34 +263,39 @@ namespace myStory {
     element.style.display = "none";
 
     let scenes: ƒS.Scenes = [
-      { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
+      // { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
+      // {
+      //   id: "vanForrest",
+      //   scene: VanForrest,
+      //   name: "VanForrest",
+      //   next: "toRestaurant",
+      // },
+      // {
+      //   id: "toRestaurant",
+      //   scene: ToRestaurant,
+      //   name: "toRestaurant",
+      //   next: "restaurant",
+      // },
+      // {
+      //   id: "restaurant",
+      //   scene: Restaurant,
+      //   name: "Restaurant_under_Table",
+      //   next: "afterRestaurant",
+      // },
+      // { id: "afterRestaurant", scene: AfterRestaurant, name: "VanStreet_back" },
+      // {
+      //   id: "vanForrestOnReturn",
+      //   scene: VanForrestOnReturn,
+      //   name: "Van in front of Home",
+      // },
+      // { id: "mushroom", scene: Mushroom, name: "Mushroom" },
+      // { id: "swing", scene: Swing, name: "Ending" },
+      // { id: "ending", scene: Ending, name: "Ending" },
       {
-        id: "vanForrest",
-        scene: VanForrest,
-        name: "VanForrest",
-        next: "toRestaurant",
+        id: "returnAfterEnding",
+        scene: ReturnAfterEnding,
+        name: "ReturnAfterEnding",
       },
-      {
-        id: "toRestaurant",
-        scene: ToRestaurant,
-        name: "toRestaurant",
-        next: "restaurant",
-      },
-      {
-        id: "restaurant",
-        scene: Restaurant,
-        name: "Restaurant_under_Table",
-        next: "afterRestaurant",
-      },
-      { id: "afterRestaurant", scene: AfterRestaurant, name: "VanStreet_back" },
-      {
-        id: "vanForrestOnReturn",
-        scene: VanForrestOnReturn,
-        name: "Van in front of Home",
-      },
-      { id: "mushroom", scene: Mushroom, name: "Mushroom" },
-      { id: "swing", scene: Swing, name: "Ending" },
-      { id: "ending", scene: Ending, name: "Ending" },
     ];
 
     // start the sequence

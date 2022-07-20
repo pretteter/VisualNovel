@@ -75,6 +75,14 @@ namespace myStory {
         position.x = currentFemaleCoordinates.x;
         position.y = currentFemaleCoordinates.y;
       }
+    } else {
+      if (character.name == characters.webster.name) {
+        currentMaleCoordinates.x = position.x;
+        currentMaleCoordinates.y = position.y;
+      } else {
+        currentFemaleCoordinates.x = position.x;
+        currentFemaleCoordinates.y = position.y;
+      }
     }
 
     await ƒS.Character.hide(character);
@@ -160,6 +168,7 @@ namespace myStory {
   }
 
   export function showLoveMeter(value?: 0 | 25 | 50 | 75 | 100) {
+    hideLoveMeter();
     const elements = Array.from(document.getElementsByClassName("circle"));
     for (let i: number = 0; i < elements.length; i++) {
       const slide = elements[i] as HTMLElement;

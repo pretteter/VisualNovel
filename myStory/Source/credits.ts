@@ -9,12 +9,19 @@ namespace myStory {
       Liegen: "Pixabay auf pexels.com",
       Stadt: "Alex Azabache auf pexels.com",
       Schaukeln: "2023852 auf pixabay.com",
+      Links:"Links befinden sich in der Quellen.txt"
     },
     Bearbeitung_der_Bilder_durch: { Bearbeiter: "Jan Christmeier" },
     Charakter: {
       Spinnen: "Tamara Auber",
       Biene: "Clker-Free-Vector-Images auf pixabay.com",
     },
+    Audio:{
+      Komponist_1:"Eric Taylors released under the Attribution 4.0 International (CC BY 4.0)",
+      Komponist_2:"Nicolas Jeudy Creator of DARK FANTASY STUDIO",
+      Weitere:"SHUTTERSTOCK MUSIC CANADA ULC",
+      Lizenz:"Befindet sich im Sound Ordner"
+    }
   };
 
   export function showCredits() {

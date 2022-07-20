@@ -143,11 +143,15 @@ declare namespace myStory {
                 2: string;
                 3: string;
                 4: string;
+                5: string;
             };
             femaleSpider: {
                 1: string;
                 2: string;
                 3: string;
+                4: string;
+                5: string;
+                6: string;
             };
         };
         VanForrestOnReturn: {
@@ -192,9 +196,15 @@ declare namespace myStory {
                 1: string;
                 2: string;
                 3: string;
+                1101: string;
+                1201: string;
+                1301: string;
             };
             femaleSpider: {
                 1: string;
+                1101: string;
+                1201: string;
+                1301: string;
             };
         };
         ReturnAfterEnding: {
@@ -202,9 +212,24 @@ declare namespace myStory {
                 1: string;
                 2: string;
                 3: string;
+                4: string;
+                5: string;
+                6: string;
+                7: string;
+                8: string;
+                9: string;
+                10: string;
             };
             femaleSpider: {
                 1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
+                6: string;
+                7: string;
+                8: string;
+                9: string;
             };
         };
     };
@@ -284,14 +309,23 @@ declare namespace myStory {
         dramatic: string;
         love: string;
         drugs: string;
+        funnyMeme: string;
+        endTheme: string;
         drums: string;
         car_door_open: string;
         car_door_close: string;
         moments_later: string;
         suspense: string;
+        bloodSpill: string;
+        bloodHit: string;
+        scaryShort: string;
     };
     let locations: {
         web: {
+            name: string;
+            background: string;
+        };
+        graveyard: {
             name: string;
             background: string;
         };
@@ -320,6 +354,10 @@ declare namespace myStory {
             background: string;
         };
         holliday: {
+            name: string;
+            background: string;
+        };
+        flower: {
             name: string;
             background: string;
         };
@@ -357,7 +395,6 @@ declare namespace myStory {
         };
     };
     let dataForSave: {
-        nameProtagonist: string;
         score: number;
     };
 }
@@ -381,6 +418,9 @@ declare namespace myStory {
 }
 declare namespace myStory {
     function Restaurant(): ƒS.SceneReturn;
+}
+declare namespace myStory {
+    function ReturnAfterEnding(): ƒS.SceneReturn;
 }
 declare namespace myStory {
     function Swing(): ƒS.SceneReturn;

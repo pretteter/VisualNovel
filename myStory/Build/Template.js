@@ -7,11 +7,11 @@ var myStory;
                 1: "Ich habe Hunger verdammt",
                 2: "wo bleiben denn all die saftigen Snacks?",
                 3: "Jaja... Ich komme ja schon",
-                4: "So... Einmal das weg und jetzt das.",
+                4: "So... Einmal das weg und jetzt das",
                 5: "Einmal Freiheit für die Dame",
-                6: "Hmm... Du könntest ja zum essen bleiben. Nur kommt heut nix angesummt.",
+                6: "Hmm... Du könntest ja zum essen bleiben. Nur kommt heut nix angesummt",
                 7: "Vielleicht spinne ich nicht genug oder das Essen ist neuerdings schlauer als ich",
-                8: "Das klingt großartig. Ansonsten sterbe ich noch vor Hunger.",
+                8: "Das klingt großartig. Ansonsten sterbe ich noch vor Hunger",
                 9: "Ich kenne da ein Lokal ein bisschen weiter weg von hier. Ich war da schon ein paar mal. Hättest du da Lust zu?",
                 10: "Leider nein. Aber die Entfernung wäre kein Problem. Ich habe einen Van",
                 11: "aber gerne. Komm mit!",
@@ -31,7 +31,7 @@ var myStory;
         VanForrest: {
             webster: {
                 1: "Ich habe einem Webdesigner geholfen, der bei der Arbeit seinen Faden verloren hat. Als Dank hat er mir seinen Van geschenkt",
-                2: "Bis jetzt bin ich überall unbeschadet hingekommen. Also sag ich mal ja.",
+                2: "Bis jetzt bin ich überall unbeschadet hingekommen. Also sag ich mal ja",
                 3: "Der dürfte sogar dich tragen können. Ich habe da so viel Beinfreiheit, da solltest du keine Probleme haben",
                 4: "Na klar. Riesen Lady first",
             },
@@ -67,7 +67,7 @@ var myStory;
             obee: {
                 1: "Ich glaub ich spinne. Dass du auch mal wieder im Lande bist. Und wie ich sehe sogar in Begleitung",
                 2: "Anscheinend ja. Was kann ich euch denn bringen",
-                3: "Zum Trinken haben wir heute ganz frische Kakerlake. Verflüssigt mit dem ausgezeichnetem 3 Sterne Speichel unseres Chef.",
+                3: "Zum Trinken haben wir heute ganz frische Kakerlake. Verflüssigt mit dem ausgezeichnetem 3 Sterne Speichel unseres Chef",
                 4: "Zum Essen kann ich das vor erst 10 minuten fallen gelassene Stück 'Gericht' von Tisch 10 dort drüben empfehlen. Habe ich selbst gekostet",
                 5: "",
             },
@@ -83,9 +83,9 @@ var myStory;
             },
             femaleSpider: {
                 1: "Hach das war schön. Mal was anderes und auch echt lecker",
-                1_1_01: "Ja sehr gerne. Werde auch schon langsam ein wenig müde.",
+                1_1_01: "Ja sehr gerne. Werde auch schon langsam ein wenig müde",
                 1_2_01: "Hmm...",
-                1_2_02: "Ich weiß was das werden soll. Aber wieso eigentlich nicht.",
+                1_2_02: "Ich weiß was das werden soll. Aber wieso eigentlich nicht",
                 1_2_03: "Hatte schon lange keinen mehr zum snacken",
                 1_2_04: "Und Spaß hatte ich auch schon lange nicht mehr",
                 1_3_01: "Öhm.... Ja gern. Wo ist das?",
@@ -98,12 +98,12 @@ var myStory;
                 2: "Wenn du Lust auf ein wenig rumgespinne hast, dann probier mal ein Stück",
                 3: "Mach einfach. Du wirst es nicht bereuen",
                 4: "Hihi, Es wirkt.",
-                5: "Der Pilz lässt dich üüüüberall hin wo du hin willst.",
+                5: "Der Pilz lässt dich üüüüberall hin wo du hin willst",
                 1_1_01: "Oh ja. Ich entspanne schon auf einer Liege weit weit weg von allem",
-                1_2_01: "Oh ja. Ich bin in einer Großstadt mit duzenden geilen Karren unterwegs.",
+                1_2_01: "Oh ja. Ich bin in einer Großstadt mit duzenden geilen Karren unterwegs",
             },
             femaleSpider: {
-                1: "Oh ja... So majestätisch.",
+                1: "Oh ja... So majestätisch",
                 2: "Was? Wieso?",
                 3: "Hmm... So ganz geheuer ist mir das nicht. Ich spinne doch eigentlich schon genug",
                 4: "Aber ok. Der Abend war schön. Keinen Grund es jetzt komisch werden zu lassen",
@@ -125,7 +125,7 @@ var myStory;
             },
             femaleSpider: {
                 1: "Aber das bin ich doch schon.",
-                2: "2 Liegen, eine grandiose Aussicht und keiiine Sorgen.",
+                2: "2 Liegen, eine grandiose Aussicht und keiiine Sorgen",
                 3: "Das ist das erste mal, dass ich Berge ohne Bäume sehe. Seltsamer Anblick",
                 1_1_01: "Jaja. Wer hätte es nicht gern",
                 4: "Himmel Hilf. Was macht der denn hier",
@@ -134,7 +134,7 @@ var myStory;
             },
             obee: {
                 1: "TADAAAA",
-                2: "Ich bringe euch die Bestellung.",
+                2: "Ich bringe euch die Bestellung",
                 3: "Unsere Spezialität des Hauses",
                 4: "Eine Insektencocktail-Kur für eure zarte junge Haut",
             },
@@ -144,12 +144,16 @@ var myStory;
                 1: "Du müsstest hier sein. Es ist soooo schön",
                 2: "Diese ganzen Autos. Dieser Stadtlärm. Einfach ein Traum",
                 3: "Ist das nicht toll?",
-                4: "Nee. Ich mag es so wie es ist. Viel asphalt und dröhnende Motoren",
+                4: "So viele geile Karren",
+                5: "Nee. Ich mag es so wie es ist. Viel asphalt und dröhnende Motoren",
             },
             femaleSpider: {
-                1: "Ja ich kann sie sehen.",
+                1: "Ja ich kann sie sehen",
                 2: "Joa... schon.",
                 3: "Gibts hier auch irgendwo einen Park? Dann könnten wir da spazieren gehen",
+                4: "Schade",
+                5: "Die Wirkung lässt auch schon wieder nach",
+                6: "ich bin schon nicht mehr bei dir",
             },
         },
         VanForrestOnReturn: {
@@ -157,7 +161,7 @@ var myStory;
                 1: "Da könnte ich mich ja glatt zuhause fühlem. Ist sehr ähnlich zu Meinem",
                 1_1_01: "Darf ich noch auf eine Fliege mit zu dir hoch kommen?",
                 1_2_01: "Wollen wir uns morgen nochmal sehen?",
-                1_2_02: "Lust hab ich immer. Und dich sehen will ich natürlich auch.",
+                1_2_02: "Lust hab ich immer. Und dich sehen will ich natürlich auch",
                 1_2_03: "Dann morgen Abend?",
                 1_3_01: "Wann darf ich darauf hoffen, dass du wieder in mein Netz fällst?",
                 1_3_02: "Morgen Abend klingt supi. An was hast du denn gedacht?",
@@ -166,25 +170,25 @@ var myStory;
             },
             femaleSpider: {
                 1: "Soo. Da wären wir. Mein trautes Heim",
-                1_1_01: "Na da ist aber jemand sehr direkt.",
+                1_1_01: "Na da ist aber jemand sehr direkt",
                 1_1_02: "Aber natürlich. Ich hatte schon lange keinen mehr zum snacken",
                 1_2_01: "Das wäre wunderschön. Hier um die Ecke gibts zwei Schaukeln. Hast du morgen Abend Lust?",
                 1_2_02: "Dann bis morgen Abend.",
                 1_3_01: "Haha.",
                 1_3_02: "Hoffen darfst du viel. Aber ich denke, wir könnten morgen Abend was machen, wenn du willst?",
-                1_3_03: "Hier um die Ecke gibt es zwei Schaukeln. Da könnten wir uns ja treffen.",
-                1_3_04: "Wenn du nicht aufpasst, bekommst du mehr von mir als dir lieb ist.",
+                1_3_03: "Hier um die Ecke gibt es zwei Schaukeln. Da könnten wir uns ja treffen",
+                1_3_04: "Wenn du nicht aufpasst, bekommst du mehr von mir als dir lieb ist",
                 1_3_05: "Also bis morgen ja?",
             },
         },
         Swing: {
             webster: {
                 1: "Ein Glück. Du bist noch da",
-                2: "Mir ist eine Fliege dazwischen gekommen.",
+                2: "Mir ist eine Fliege dazwischen gekommen",
                 3: "Kennst du doch bestimmt auch oder?",
             },
             femaleSpider: {
-                1: "Jep. Aber lange hätte ich nicht mehr gewartet.",
+                1: "Jep. Aber lange hätte ich nicht mehr gewartet",
                 2: "Was ist denn passiert? Wieso kommst du erst so spät?",
                 3: "Haha. Ja klar. Da hatte ich das Glück, dass ich noch satt bin",
             },
@@ -194,19 +198,40 @@ var myStory;
                 1: "",
                 2: "",
                 3: "",
+                1_1_01: "",
+                1_2_01: "",
+                1_3_01: "",
             },
             femaleSpider: {
                 1: "",
+                1_1_01: "",
+                1_2_01: "",
+                1_3_01: "",
             },
         },
         ReturnAfterEnding: {
             webster: {
-                1: "Ach... Du hier? Welch ein Zufall",
-                2: "",
-                3: "",
+                1: "Ach mann...",
+                2: "Ich vermisse sie",
+                3: "Vermutlich spinne ich, aber ich kann nicht anders",
+                4: "Ich glaube ich liebe sie",
+                5: "Aber leben tu ich eigentlich auch gerne,",
+                6: "So ein Scheis verdammt nochmal",
+                7: "Ach scheis drauf...",
+                8: "Zu mir oder zu dir?",
+                9: "Ja bin ich. Also?",
+                10: "Alles klar. Mein Van steht da hinten",
             },
             femaleSpider: {
-                1: "",
+                1: "Oh",
+                2: "Du hier?",
+                3: "Was machst du hier?",
+                4: "Was?",
+                5: "Bist du dir sicher?",
+                6: "Öhm... Wieder zu mir!",
+                7: "Tja... Wieder einer weniger",
+                8: "Merke: Entzückend, aber verherend",
+                9: "Das schreibe ich mir auf meinen eigenen Van",
             },
         },
     };
@@ -398,6 +423,16 @@ var myStory;
                 position.y = myStory.currentFemaleCoordinates.y;
             }
         }
+        else {
+            if (character.name == myStory.characters.webster.name) {
+                myStory.currentMaleCoordinates.x = position.x;
+                myStory.currentMaleCoordinates.y = position.y;
+            }
+            else {
+                myStory.currentFemaleCoordinates.x = position.x;
+                myStory.currentFemaleCoordinates.y = position.y;
+            }
+        }
         await myStory.ƒS.Character.hide(character);
         await myStory.ƒS.Character.show(character, pose, myStory.ƒS.positionPercent(position.x, position.y));
         await myStory.ƒS.update(update ? update : 0);
@@ -466,6 +501,7 @@ var myStory;
     }
     myStory.hideLoveMeter = hideLoveMeter;
     function showLoveMeter(value) {
+        hideLoveMeter();
         const elements = Array.from(document.getElementsByClassName("circle"));
         for (let i = 0; i < elements.length; i++) {
             const slide = elements[i];
@@ -498,7 +534,7 @@ var myStory;
             edge: 0,
         },
         puzzle: {
-            duration: 1,
+            duration: 3,
             alpha: "Images/FreeTransitions/JigsawThemedTransitions/puzzle.png",
             edge: 1,
         },
@@ -519,23 +555,28 @@ var myStory;
         car_interior: "Sounds/Car Interior.mp3",
         dramatic: "Sounds/Army of Death (looped).wav",
         love: "Sounds/Sad_and_Sweet/love and secrets.mp3",
-        drugs: "/Sounds/17-Dark Fantasy Studio- Joke.mp3",
+        drugs: "Sounds/17-Dark Fantasy Studio- Joke.mp3",
+        funnyMeme: "Sounds/Humorus_lighthearted/the_funny_mime.mp3",
+        endTheme: "Sounds/Medieval Theme.wav",
         // soundeffects
         drums: "Sounds/drum_beats_and_loops/drumbeat.wav",
         car_door_open: "Sounds/Effects/truck_door_open.wav",
         car_door_close: "Sounds/Effects/Car door.wav",
         moments_later: "Sounds/Effects/SPONGEBOB TIME CARDS - A FEW MOMENTS LATER.mp3",
         suspense: "Sounds/Effects/Suspense.mp3",
+        bloodSpill: "Sounds/Effects/blood_guts_spill.wav",
+        bloodHit: "Sounds/Effects/Blood_Hit.wav",
+        scaryShort: "Sounds/Effects/Suspense short.mp3",
     };
     myStory.locations = {
         web: {
             name: "web",
             background: "Images/Backgrounds/spiderweb.jpg",
         },
-        // graveyard: {
-        //   name: "graveyard",
-        //   background: "Images/Backgrounds/graveyard.jpg",
-        // },
+        graveyard: {
+            name: "graveyard",
+            background: "Images/Backgrounds/graveyard.jpg",
+        },
         restaurant_underTable: {
             name: "restaurant_undertable",
             background: "Images/Backgrounds/restaurant_unter_table-studio_cartoon.jpg",
@@ -563,6 +604,10 @@ var myStory;
         holliday: {
             name: "holliday",
             background: "Images/Backgrounds/holliday.jpg",
+        },
+        flower: {
+            name: "flower",
+            background: "/Images/Backgrounds/flower.jpg",
         },
     };
     // export let items = {
@@ -631,18 +676,19 @@ var myStory;
         },
     };
     myStory.dataForSave = {
-        nameProtagonist: "",
         score: 0,
     };
     // MENÜ
     let inGameMenuButtons = {
         save: "Save",
         load: "Laden",
-        close: "Schließen",
         credits: "Credits",
+        showLoveMeter: "Liebesstand?",
+        close: "Schließen",
     };
     let gameMenu;
     let menuIsOpen = true;
+    let isLoveMeterShowed = false;
     // let inventoryOpen: boolean = false;
     async function buttonFunctions(option) {
         switch (option) {
@@ -655,6 +701,16 @@ var myStory;
             case inGameMenuButtons.close:
                 gameMenu.close();
                 menuIsOpen = false;
+                break;
+            case inGameMenuButtons.showLoveMeter:
+                if (isLoveMeterShowed) {
+                    myStory.hideLoveMeter();
+                    isLoveMeterShowed = false;
+                }
+                else {
+                    myStory.showLoveMeter();
+                    isLoveMeterShowed = true;
+                }
                 break;
             case inGameMenuButtons.credits:
                 myStory.showCredits();
@@ -707,34 +763,39 @@ var myStory;
         let element = Array.from(document.getElementsByTagName("speech"))[0];
         element.style.display = "none";
         let scenes = [
-            { id: "intro", scene: myStory.Intro, name: "Intro", next: "vanForrest" },
+            // { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
+            // {
+            //   id: "vanForrest",
+            //   scene: VanForrest,
+            //   name: "VanForrest",
+            //   next: "toRestaurant",
+            // },
+            // {
+            //   id: "toRestaurant",
+            //   scene: ToRestaurant,
+            //   name: "toRestaurant",
+            //   next: "restaurant",
+            // },
+            // {
+            //   id: "restaurant",
+            //   scene: Restaurant,
+            //   name: "Restaurant_under_Table",
+            //   next: "afterRestaurant",
+            // },
+            // { id: "afterRestaurant", scene: AfterRestaurant, name: "VanStreet_back" },
+            // {
+            //   id: "vanForrestOnReturn",
+            //   scene: VanForrestOnReturn,
+            //   name: "Van in front of Home",
+            // },
+            // { id: "mushroom", scene: Mushroom, name: "Mushroom" },
+            // { id: "swing", scene: Swing, name: "Ending" },
+            // { id: "ending", scene: Ending, name: "Ending" },
             {
-                id: "vanForrest",
-                scene: myStory.VanForrest,
-                name: "VanForrest",
-                next: "toRestaurant",
+                id: "returnAfterEnding",
+                scene: myStory.ReturnAfterEnding,
+                name: "ReturnAfterEnding",
             },
-            {
-                id: "toRestaurant",
-                scene: myStory.ToRestaurant,
-                name: "toRestaurant",
-                next: "restaurant",
-            },
-            {
-                id: "restaurant",
-                scene: myStory.Restaurant,
-                name: "Restaurant_under_Table",
-                next: "afterRestaurant",
-            },
-            { id: "afterRestaurant", scene: myStory.AfterRestaurant, name: "VanStreet_back" },
-            {
-                id: "vanForrestOnReturn",
-                scene: myStory.VanForrestOnReturn,
-                name: "Van in front of Home",
-            },
-            { id: "mushroom", scene: myStory.Mushroom, name: "Mushroom" },
-            { id: "swing", scene: myStory.Swing, name: "Ending" },
-            { id: "ending", scene: myStory.Ending, name: "Ending" },
         ];
         // start the sequence
         let uiElement = document.querySelector("[type=interface]");
@@ -756,12 +817,19 @@ var myStory;
             Liegen: "Pixabay auf pexels.com",
             Stadt: "Alex Azabache auf pexels.com",
             Schaukeln: "2023852 auf pixabay.com",
+            Links: "Links befinden sich in der Quellen.txt"
         },
         Bearbeitung_der_Bilder_durch: { Bearbeiter: "Jan Christmeier" },
         Charakter: {
             Spinnen: "Tamara Auber",
             Biene: "Clker-Free-Vector-Images auf pixabay.com",
         },
+        Audio: {
+            Komponist_1: "Eric Taylors released under the Attribution 4.0 International (CC BY 4.0)",
+            Komponist_2: "Nicolas Jeudy Creator of DARK FANTASY STUDIO",
+            Weitere: "SHUTTERSTOCK MUSIC CANADA ULC",
+            Lizenz: "Befindet sich im Sound Ordner"
+        }
     };
     function showCredits() {
         let string = "CREDITS";
@@ -803,14 +871,17 @@ var myStory;
         switch (decition1) {
             case decitionAnswer.home:
                 await dialogueHome();
+                myStory.showLoveMeter(25);
                 await myStory.clearScene();
                 return "vanForrestOnReturn";
             case decitionAnswer.romantic:
                 await dialogueRomantic();
+                myStory.showLoveMeter(0);
                 await myStory.clearScene();
                 return "ending";
             case decitionAnswer.doSomething:
                 await dialogueMushroom();
+                myStory.showLoveMeter(25);
                 await myStory.clearScene();
                 return "mushroom";
         }
@@ -1008,6 +1079,61 @@ var myStory;
 })(myStory || (myStory = {}));
 var myStory;
 (function (myStory) {
+    async function ReturnAfterEnding() {
+        await myStory.changeLocation(myStory.locations.flower, myStory.transitions.test);
+        myStory.ƒS.Sound.fade(myStory.sounds.funnyMeme, 0.3, 0.5, true);
+        myStory.currentActiveScene = "ReturnAfterEnding";
+        myStory.currentFemaleCoordinates = { x: 0, y: 95 };
+        await myStory.newPose(myStory.characters.webster, "normal");
+        await myStory.tell(myStory.characters.webster, 1);
+        await myStory.tell(myStory.characters.webster, 2);
+        await myStory.newPose(myStory.characters.webster, "sad");
+        await myStory.tell(myStory.characters.webster, 3);
+        await myStory.tell(myStory.characters.webster, 4);
+        await myStory.tell(myStory.characters.webster, 5);
+        await myStory.newPose(myStory.characters.webster, "angry");
+        await myStory.tell(myStory.characters.webster, 6);
+        myStory.ƒS.Sound.play(myStory.sounds.scaryShort, 0.6);
+        await myStory.newPose(myStory.characters.webster, "scared");
+        myStory.moveCharacterToLocaton(myStory.characters.phobia, myStory.characters.phobia.pose.normal, {
+            x: 25,
+            y: 95,
+        }, 0.0025, 0);
+        await myStory.tell(myStory.characters.phobia, 1);
+        await myStory.newPose(myStory.characters.phobia, "demon");
+        await myStory.tell(myStory.characters.phobia, 2);
+        await myStory.newPose(myStory.characters.phobia, "normal");
+        await myStory.newPose(myStory.characters.webster, "normal");
+        await myStory.tell(myStory.characters.phobia, 3);
+        await myStory.tell(myStory.characters.webster, 7);
+        await myStory.tell(myStory.characters.webster, 8);
+        await myStory.newPose(myStory.characters.phobia, "scared");
+        await myStory.tell(myStory.characters.phobia, 4);
+        await myStory.newPose(myStory.characters.phobia, "normal");
+        await myStory.tell(myStory.characters.phobia, 5);
+        await myStory.tell(myStory.characters.webster, 9);
+        await myStory.newPose(myStory.characters.phobia, "demon");
+        await myStory.tell(myStory.characters.phobia, 6);
+        await myStory.newPose(myStory.characters.phobia, "normal");
+        myStory.ƒS.Sound.play(myStory.sounds.suspense, 0.6);
+        myStory.ƒS.Sound.fade(myStory.sounds.funnyMeme, 0, 1);
+        await myStory.tell(myStory.characters.webster, 10);
+        await myStory.clearScene();
+        myStory.ƒS.Sound.fade(myStory.sounds.endTheme, 0.3, 0.5, true);
+        await myStory.changeLocation(myStory.locations.graveyard, myStory.transitions.puzzle);
+        await myStory.newPose(myStory.characters.phobia, "normal", 0, { x: 15, y: 90 });
+        await myStory.tell(myStory.characters.phobia, 7);
+        await myStory.newPose(myStory.characters.phobia, "sad");
+        await myStory.tell(myStory.characters.phobia, 8);
+        await myStory.newPose(myStory.characters.phobia, "normal");
+        await myStory.tell(myStory.characters.phobia, 9);
+        await myStory.clearScene();
+        myStory.showCredits();
+    }
+    myStory.ReturnAfterEnding = ReturnAfterEnding;
+})(myStory || (myStory = {}));
+var myStory;
+(function (myStory) {
     async function Swing() {
         myStory.currentActiveScene = "Swing";
         await myStory.changeLocation(myStory.locations.swing, myStory.transitions.test);
@@ -1126,7 +1252,7 @@ var myStory;
             y: 80,
         }, 0.025, 0);
         let decitionAnswer = {
-            upstairs: "indirekt nach Sex fragen",
+            upstairs: "Mit hoch gehen",
             tomorrow: "Morgen wieder treffen?",
             sometimes: "Wann wieder sehen?",
         };
@@ -1134,14 +1260,17 @@ var myStory;
         switch (decition1) {
             case decitionAnswer.upstairs:
                 await dialogueUpstairs();
+                myStory.showLoveMeter(50);
                 await myStory.clearScene();
                 return "ending";
             case decitionAnswer.tomorrow:
                 await dialogueMeetTomorrow();
+                myStory.showLoveMeter(50);
                 await myStory.clearScene();
                 return "swing";
             case decitionAnswer.sometimes:
                 await dialogueWhenNextMeeting();
+                myStory.showLoveMeter(50);
                 await myStory.clearScene();
                 return "swing";
         }

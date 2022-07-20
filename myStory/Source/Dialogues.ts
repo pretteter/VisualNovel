@@ -5,11 +5,11 @@ namespace myStory {
         1: "Ich habe Hunger verdammt",
         2: "wo bleiben denn all die saftigen Snacks?",
         3: "Jaja... Ich komme ja schon",
-        4: "So... Einmal das weg und jetzt das.",
+        4: "So... Einmal das weg und jetzt das",
         5: "Einmal Freiheit für die Dame",
-        6: "Hmm... Du könntest ja zum essen bleiben. Nur kommt heut nix angesummt.",
+        6: "Hmm... Du könntest ja zum essen bleiben. Nur kommt heut nix angesummt",
         7: "Vielleicht spinne ich nicht genug oder das Essen ist neuerdings schlauer als ich",
-        8: "Das klingt großartig. Ansonsten sterbe ich noch vor Hunger.",
+        8: "Das klingt großartig. Ansonsten sterbe ich noch vor Hunger",
         9: "Ich kenne da ein Lokal ein bisschen weiter weg von hier. Ich war da schon ein paar mal. Hättest du da Lust zu?",
         10: "Leider nein. Aber die Entfernung wäre kein Problem. Ich habe einen Van",
         11: "aber gerne. Komm mit!",
@@ -29,7 +29,7 @@ namespace myStory {
     VanForrest: {
       webster: {
         1: "Ich habe einem Webdesigner geholfen, der bei der Arbeit seinen Faden verloren hat. Als Dank hat er mir seinen Van geschenkt",
-        2: "Bis jetzt bin ich überall unbeschadet hingekommen. Also sag ich mal ja.",
+        2: "Bis jetzt bin ich überall unbeschadet hingekommen. Also sag ich mal ja",
         3: "Der dürfte sogar dich tragen können. Ich habe da so viel Beinfreiheit, da solltest du keine Probleme haben",
         4: "Na klar. Riesen Lady first",
       },
@@ -65,7 +65,7 @@ namespace myStory {
       obee: {
         1: "Ich glaub ich spinne. Dass du auch mal wieder im Lande bist. Und wie ich sehe sogar in Begleitung",
         2: "Anscheinend ja. Was kann ich euch denn bringen",
-        3: "Zum Trinken haben wir heute ganz frische Kakerlake. Verflüssigt mit dem ausgezeichnetem 3 Sterne Speichel unseres Chef.",
+        3: "Zum Trinken haben wir heute ganz frische Kakerlake. Verflüssigt mit dem ausgezeichnetem 3 Sterne Speichel unseres Chef",
         4: "Zum Essen kann ich das vor erst 10 minuten fallen gelassene Stück 'Gericht' von Tisch 10 dort drüben empfehlen. Habe ich selbst gekostet",
         5: "",
       },
@@ -82,9 +82,9 @@ namespace myStory {
       },
       femaleSpider: {
         1: "Hach das war schön. Mal was anderes und auch echt lecker",
-        1_1_01: "Ja sehr gerne. Werde auch schon langsam ein wenig müde.",
+        1_1_01: "Ja sehr gerne. Werde auch schon langsam ein wenig müde",
         1_2_01: "Hmm...",
-        1_2_02: "Ich weiß was das werden soll. Aber wieso eigentlich nicht.",
+        1_2_02: "Ich weiß was das werden soll. Aber wieso eigentlich nicht",
         1_2_03: "Hatte schon lange keinen mehr zum snacken",
         1_2_04: "Und Spaß hatte ich auch schon lange nicht mehr",
         1_3_01: "Öhm.... Ja gern. Wo ist das?",
@@ -97,14 +97,14 @@ namespace myStory {
         2: "Wenn du Lust auf ein wenig rumgespinne hast, dann probier mal ein Stück",
         3: "Mach einfach. Du wirst es nicht bereuen",
         4: "Hihi, Es wirkt.",
-        5: "Der Pilz lässt dich üüüüberall hin wo du hin willst.",
+        5: "Der Pilz lässt dich üüüüberall hin wo du hin willst",
         1_1_01:
           "Oh ja. Ich entspanne schon auf einer Liege weit weit weg von allem",
         1_2_01:
-          "Oh ja. Ich bin in einer Großstadt mit duzenden geilen Karren unterwegs.",
+          "Oh ja. Ich bin in einer Großstadt mit duzenden geilen Karren unterwegs",
       },
       femaleSpider: {
-        1: "Oh ja... So majestätisch.",
+        1: "Oh ja... So majestätisch",
         2: "Was? Wieso?",
         3: "Hmm... So ganz geheuer ist mir das nicht. Ich spinne doch eigentlich schon genug",
         4: "Aber ok. Der Abend war schön. Keinen Grund es jetzt komisch werden zu lassen",
@@ -126,7 +126,7 @@ namespace myStory {
       },
       femaleSpider: {
         1: "Aber das bin ich doch schon.",
-        2: "2 Liegen, eine grandiose Aussicht und keiiine Sorgen.",
+        2: "2 Liegen, eine grandiose Aussicht und keiiine Sorgen",
         3: "Das ist das erste mal, dass ich Berge ohne Bäume sehe. Seltsamer Anblick",
         1_1_01: "Jaja. Wer hätte es nicht gern",
         4: "Himmel Hilf. Was macht der denn hier",
@@ -135,7 +135,7 @@ namespace myStory {
       },
       obee: {
         1: "TADAAAA",
-        2: "Ich bringe euch die Bestellung.",
+        2: "Ich bringe euch die Bestellung",
         3: "Unsere Spezialität des Hauses",
         4: "Eine Insektencocktail-Kur für eure zarte junge Haut",
       },
@@ -145,12 +145,16 @@ namespace myStory {
         1: "Du müsstest hier sein. Es ist soooo schön",
         2: "Diese ganzen Autos. Dieser Stadtlärm. Einfach ein Traum",
         3: "Ist das nicht toll?",
-        4: "Nee. Ich mag es so wie es ist. Viel asphalt und dröhnende Motoren",
+        4: "So viele geile Karren",
+        5: "Nee. Ich mag es so wie es ist. Viel asphalt und dröhnende Motoren",
       },
       femaleSpider: {
-        1: "Ja ich kann sie sehen.",
+        1: "Ja ich kann sie sehen",
         2: "Joa... schon.",
         3: "Gibts hier auch irgendwo einen Park? Dann könnten wir da spazieren gehen",
+        4: "Schade",
+        5: "Die Wirkung lässt auch schon wieder nach",
+        6: "ich bin schon nicht mehr bei dir",
       },
     },
     VanForrestOnReturn: {
@@ -158,7 +162,7 @@ namespace myStory {
         1: "Da könnte ich mich ja glatt zuhause fühlem. Ist sehr ähnlich zu Meinem",
         1_1_01: "Darf ich noch auf eine Fliege mit zu dir hoch kommen?",
         1_2_01: "Wollen wir uns morgen nochmal sehen?",
-        1_2_02: "Lust hab ich immer. Und dich sehen will ich natürlich auch.",
+        1_2_02: "Lust hab ich immer. Und dich sehen will ich natürlich auch",
         1_2_03: "Dann morgen Abend?",
         1_3_01:
           "Wann darf ich darauf hoffen, dass du wieder in mein Netz fällst?",
@@ -168,7 +172,7 @@ namespace myStory {
       },
       femaleSpider: {
         1: "Soo. Da wären wir. Mein trautes Heim",
-        1_1_01: "Na da ist aber jemand sehr direkt.",
+        1_1_01: "Na da ist aber jemand sehr direkt",
         1_1_02: "Aber natürlich. Ich hatte schon lange keinen mehr zum snacken",
         1_2_01:
           "Das wäre wunderschön. Hier um die Ecke gibts zwei Schaukeln. Hast du morgen Abend Lust?",
@@ -177,20 +181,20 @@ namespace myStory {
         1_3_02:
           "Hoffen darfst du viel. Aber ich denke, wir könnten morgen Abend was machen, wenn du willst?",
         1_3_03:
-          "Hier um die Ecke gibt es zwei Schaukeln. Da könnten wir uns ja treffen.",
+          "Hier um die Ecke gibt es zwei Schaukeln. Da könnten wir uns ja treffen",
         1_3_04:
-          "Wenn du nicht aufpasst, bekommst du mehr von mir als dir lieb ist.",
+          "Wenn du nicht aufpasst, bekommst du mehr von mir als dir lieb ist",
         1_3_05: "Also bis morgen ja?",
       },
     },
     Swing: {
       webster: {
         1: "Ein Glück. Du bist noch da",
-        2: "Mir ist eine Fliege dazwischen gekommen.",
+        2: "Mir ist eine Fliege dazwischen gekommen",
         3: "Kennst du doch bestimmt auch oder?",
       },
       femaleSpider: {
-        1: "Jep. Aber lange hätte ich nicht mehr gewartet.",
+        1: "Jep. Aber lange hätte ich nicht mehr gewartet",
         2: "Was ist denn passiert? Wieso kommst du erst so spät?",
         3: "Haha. Ja klar. Da hatte ich das Glück, dass ich noch satt bin",
       },
@@ -200,19 +204,40 @@ namespace myStory {
         1: "",
         2: "",
         3: "",
+        1_1_01: "",
+        1_2_01: "",
+        1_3_01: "",
       },
       femaleSpider: {
         1: "",
+        1_1_01: "",
+        1_2_01: "",
+        1_3_01: "",
       },
     },
     ReturnAfterEnding: {
       webster: {
-        1: "Ach... Du hier? Welch ein Zufall",
-        2: "",
-        3: "",
+        1: "Ach mann...",
+        2: "Ich vermisse sie",
+        3: "Vermutlich spinne ich, aber ich kann nicht anders",
+        4: "Ich glaube ich liebe sie",
+        5: "Aber leben tu ich eigentlich auch gerne,",
+        6: "So ein Scheis verdammt nochmal",
+        7: "Ach scheis drauf...",
+        8: "Zu mir oder zu dir?",
+        9: "Ja bin ich. Also?",
+        10: "Alles klar. Mein Van steht da hinten",
       },
       femaleSpider: {
-        1: "",
+        1: "Oh",
+        2: "Du hier?",
+        3: "Was machst du hier?",
+        4: "Was?",
+        5: "Bist du dir sicher?",
+        6: "Öhm... Wieder zu mir!",
+        7: "Tja... Wieder einer weniger",
+        8: "Merke: Entzückend, aber verherend",
+        9: "Das schreibe ich mir auf meinen eigenen Van",
       },
     },
   };

@@ -27,7 +27,7 @@ namespace myStory {
     );
 
     let decitionAnswer = {
-      upstairs: "indirekt nach Sex fragen",
+      upstairs: "Mit hoch gehen",
       tomorrow: "Morgen wieder treffen?",
       sometimes: "Wann wieder sehen?",
     };
@@ -35,14 +35,17 @@ namespace myStory {
     switch (decition1) {
       case decitionAnswer.upstairs:
         await dialogueUpstairs();
+        showLoveMeter(50);
         await clearScene();
         return "ending";
       case decitionAnswer.tomorrow:
         await dialogueMeetTomorrow();
+        showLoveMeter(50);
         await clearScene();
         return "swing";
       case decitionAnswer.sometimes:
         await dialogueWhenNextMeeting();
+        showLoveMeter(50);
         await clearScene();
         return "swing";
     }

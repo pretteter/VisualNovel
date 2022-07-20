@@ -23,14 +23,17 @@ namespace myStory {
     switch (decition1) {
       case decitionAnswer.home:
         await dialogueHome();
+        showLoveMeter(25);
         await clearScene();
         return "vanForrestOnReturn";
       case decitionAnswer.romantic:
         await dialogueRomantic();
+        showLoveMeter(0);
         await clearScene();
         return "ending";
       case decitionAnswer.doSomething:
         await dialogueMushroom();
+        showLoveMeter(25);
         await clearScene();
         return "mushroom";
     }

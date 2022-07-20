@@ -102,7 +102,7 @@ content {
   height: 150px;
 }
 
-.inventory {
+/* .inventory {
   background: rgba(253, 253, 253, 0.5);
 }
 
@@ -115,7 +115,52 @@ content {
 .inventory ul li img {
   max-width: 100px;
   max-height: 100px;
+} */
+
+
+.gameMenu{
+  position: absolute;
+  bottom: 70%;
+  /* transform: translate(-50%, -50%); */
 }
+
+.gameMenu button{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.gameMenu button:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all .35s;
+}
+
+.gameMenu button:hover:after{
+  width: 10%;
+}
+
+
+
+
+
+
+
 
 .decision {
   width: 180px;
@@ -145,8 +190,9 @@ content {
 .credits {
   background-color: yellow;
   animation: appear 350ms ease-in 1;
-  max-width: 500px;
+  max-width: 700px;
   max-height: 800px;
+  overflow: auto;
 }
 
 @keyframes appear {
