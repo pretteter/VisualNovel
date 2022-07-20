@@ -27,6 +27,7 @@ namespace myStory {
 
       case decitionAnswer.iSayYes:
     }
+    showLoveMeter(25);
     ƒS.Sound.fade(sounds.restaurant_people, 0, 0.5);
     ƒS.Sound.fade(sounds.restaurant_jazz, 0, 0.5);
     await clearScene();

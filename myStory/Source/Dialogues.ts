@@ -207,7 +207,7 @@ namespace myStory {
     },
     ReturnAfterEnding: {
       webster: {
-        1: "",
+        1: "Ach... Du hier? Welch ein Zufall",
         2: "",
         3: "",
       },

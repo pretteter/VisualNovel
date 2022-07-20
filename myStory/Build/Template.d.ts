@@ -241,6 +241,8 @@ declare namespace myStory {
     function tell(character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer, numberOfDialog: number | string): Promise<void>;
     function changeLocation(location: typeof locations.web, transition: typeof transitions.noContent): Promise<void>;
     function clearScene(): Promise<void>;
+    function hideLoveMeter(): void;
+    function showLoveMeter(value?: 0 | 25 | 50 | 75 | 100): void;
 }
 declare namespace myStory {
     export import ƒ = FudgeCore;
@@ -281,6 +283,7 @@ declare namespace myStory {
         car_interior: string;
         dramatic: string;
         love: string;
+        drugs: string;
         drums: string;
         car_door_open: string;
         car_door_close: string;

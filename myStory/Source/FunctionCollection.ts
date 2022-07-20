@@ -150,4 +150,25 @@ namespace myStory {
     await ƒS.Character.hideAll();
     await ƒS.update();
   }
+
+  export function hideLoveMeter() {
+    const elements = Array.from(document.getElementsByClassName("circle"));
+    for (let i: number = 0; i < elements.length; i++) {
+      const slide = elements[i] as HTMLElement;
+      slide.style.display = "none";
+    }
+  }
+
+  export function showLoveMeter(value?: 0 | 25 | 50 | 75 | 100) {
+    const elements = Array.from(document.getElementsByClassName("circle"));
+    for (let i: number = 0; i < elements.length; i++) {
+      const slide = elements[i] as HTMLElement;
+      value
+        ? (slide.className = "circle per-" + value.toString()) &&
+          (dataForSave.score = value)
+        : (slide.className = "circle per-" + dataForSave.score);
+
+      slide.style.display = "";
+    }
+  }
 }

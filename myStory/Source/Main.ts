@@ -29,7 +29,6 @@ namespace myStory {
       edge: 1,
     },
   };
-
   export let sounds = {
     // theme
     wakeup: "Sounds/Sad_and_Sweet/wakeup.mp3",
@@ -41,6 +40,7 @@ namespace myStory {
     car_interior: "Sounds/Car Interior.mp3",
     dramatic: "Sounds/Army of Death (looped).wav",
     love: "Sounds/Sad_and_Sweet/love and secrets.mp3",
+    drugs: "/Sounds/17-Dark Fantasy Studio- Joke.mp3",
 
     // soundeffects
     drums: "Sounds/drum_beats_and_loops/drumbeat.wav",
@@ -174,7 +174,7 @@ namespace myStory {
 
   let gameMenu: ƒS.Menu;
   let menuIsOpen: boolean = true;
-  let inventoryOpen: boolean = false;
+  // let inventoryOpen: boolean = false;
 
   async function buttonFunctions(option: string): Promise<void> {
     switch (option) {
@@ -206,17 +206,17 @@ namespace myStory {
         console.log("Load");
         await ƒS.Progress.load();
         break;
-      case ƒ.KEYBOARD_CODE.I:
-        console.log("Inventory");
-        if (inventoryOpen) {
-          ƒS.Inventory.close();
-          inventoryOpen = false;
-        } else {
-          ƒS.Inventory.open();
-          inventoryOpen = true;
-        }
-        // inventoryOpen = !inventoryOpen
-        break;
+      // case ƒ.KEYBOARD_CODE.I:
+      //   console.log("Inventory");
+      //   if (inventoryOpen) {
+      //     ƒS.Inventory.close();
+      //     inventoryOpen = false;
+      //   } else {
+      //     ƒS.Inventory.open();
+      //     inventoryOpen = true;
+      //   }
+      //   // inventoryOpen = !inventoryOpen
+      //   break;
       case ƒ.KEYBOARD_CODE.M:
         console.log("Menu");
         if (menuIsOpen) {
@@ -234,6 +234,7 @@ namespace myStory {
 
   window.addEventListener("load", start);
   function start(_event: Event): void {
+    hideLoveMeter();
     gameMenu = ƒS.Menu.create(inGameMenuButtons, buttonFunctions, "gameMenu");
     buttonFunctions(inGameMenuButtons.close);
 

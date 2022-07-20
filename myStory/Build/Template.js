@@ -201,7 +201,7 @@ var myStory;
         },
         ReturnAfterEnding: {
             webster: {
-                1: "",
+                1: "Ach... Du hier? Welch ein Zufall",
                 2: "",
                 3: "",
             },
@@ -457,6 +457,26 @@ var myStory;
         await myStory.ƒS.update();
     }
     myStory.clearScene = clearScene;
+    function hideLoveMeter() {
+        const elements = Array.from(document.getElementsByClassName("circle"));
+        for (let i = 0; i < elements.length; i++) {
+            const slide = elements[i];
+            slide.style.display = "none";
+        }
+    }
+    myStory.hideLoveMeter = hideLoveMeter;
+    function showLoveMeter(value) {
+        const elements = Array.from(document.getElementsByClassName("circle"));
+        for (let i = 0; i < elements.length; i++) {
+            const slide = elements[i];
+            value
+                ? (slide.className = "circle per-" + value.toString()) &&
+                    (myStory.dataForSave.score = value)
+                : (slide.className = "circle per-" + myStory.dataForSave.score);
+            slide.style.display = "";
+        }
+    }
+    myStory.showLoveMeter = showLoveMeter;
 })(myStory || (myStory = {}));
 var myStory;
 (function (myStory) {
@@ -499,6 +519,7 @@ var myStory;
         car_interior: "Sounds/Car Interior.mp3",
         dramatic: "Sounds/Army of Death (looped).wav",
         love: "Sounds/Sad_and_Sweet/love and secrets.mp3",
+        drugs: "/Sounds/17-Dark Fantasy Studio- Joke.mp3",
         // soundeffects
         drums: "Sounds/drum_beats_and_loops/drumbeat.wav",
         car_door_open: "Sounds/Effects/truck_door_open.wav",
@@ -622,7 +643,7 @@ var myStory;
     };
     let gameMenu;
     let menuIsOpen = true;
-    let inventoryOpen = false;
+    // let inventoryOpen: boolean = false;
     async function buttonFunctions(option) {
         switch (option) {
             case inGameMenuButtons.save:
@@ -652,18 +673,17 @@ var myStory;
                 console.log("Load");
                 await myStory.ƒS.Progress.load();
                 break;
-            case myStory.ƒ.KEYBOARD_CODE.I:
-                console.log("Inventory");
-                if (inventoryOpen) {
-                    myStory.ƒS.Inventory.close();
-                    inventoryOpen = false;
-                }
-                else {
-                    myStory.ƒS.Inventory.open();
-                    inventoryOpen = true;
-                }
-                // inventoryOpen = !inventoryOpen
-                break;
+            // case ƒ.KEYBOARD_CODE.I:
+            //   console.log("Inventory");
+            //   if (inventoryOpen) {
+            //     ƒS.Inventory.close();
+            //     inventoryOpen = false;
+            //   } else {
+            //     ƒS.Inventory.open();
+            //     inventoryOpen = true;
+            //   }
+            //   // inventoryOpen = !inventoryOpen
+            //   break;
             case myStory.ƒ.KEYBOARD_CODE.M:
                 console.log("Menu");
                 if (menuIsOpen) {
@@ -681,6 +701,7 @@ var myStory;
     }
     window.addEventListener("load", start);
     function start(_event) {
+        myStory.hideLoveMeter();
         gameMenu = myStory.ƒS.Menu.create(inGameMenuButtons, buttonFunctions, "gameMenu");
         buttonFunctions(inGameMenuButtons.close);
         let element = Array.from(document.getElementsByTagName("speech"))[0];
@@ -775,6 +796,7 @@ var myStory;
             romantic: "romantische Nacht verbringen",
             doSomething: "zu einem weiteren tollen Ort fahren",
         };
+        myStory.hideLoveMeter();
         await myStory.tell(myStory.characters.phobia, 1);
         await myStory.tell(myStory.characters.webster, 1);
         let decition1 = await myStory.ƒS.Menu.getInput(decitionAnswer, "decision");
@@ -848,7 +870,6 @@ var myStory;
 (function (myStory) {
     async function Intro() {
         myStory.currentActiveScene = "Intro";
-        // ƒS.Sound.play(sounds.wakeup, 0.5, true);
         myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0.3, 2, true);
         // for (let key of Object.values(items)) {
         //   ƒS.Inventory.add(key);
@@ -902,23 +923,7 @@ var myStory;
         await myStory.tell(myStory.characters.phobia, 8);
         await myStory.tell(myStory.characters.phobia, 9);
         await myStory.tell(myStory.characters.webster, 11);
-        // ƒS.Speech.clear();
-        // await ƒS.Character.hideAll();
-        // await ƒS.update();
         await myStory.clearScene();
-        // ƒS.Sound.play(sounds.nightclub, 0.5);
-        // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);
-        // let decitionAnswer = {
-        //   iSayOk: "Okay",
-        //   iSayYes: "Yes",
-        //   iSayNo: "No"
-        // }
-        // let decition = await ƒS.Menu.getInput(decitionAnswer, "some CSS classe");
-        // switch (decition) {
-        //   case decitionAnswer.iSayNo:
-        //   case decitionAnswer.iSayOk:
-        //   case decitionAnswer.iSayYes:
-        // }
     }
     myStory.Intro = Intro;
 })(myStory || (myStory = {}));
@@ -928,7 +933,10 @@ var myStory;
         myStory.currentActiveScene = "Mushroom";
         myStory.currentFemaleCoordinates = { x: 20, y: 85 };
         myStory.currentMaleCoordinates = { x: 75, y: 80 };
+        myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0.3, 2, true);
         await myStory.changeLocation(myStory.locations.mushroom, myStory.transitions.test);
+        await myStory.newPose(myStory.characters.webster, "normal");
+        await myStory.newPose(myStory.characters.phobia, "normal");
         await myStory.tell(myStory.characters.webster, 1);
         await myStory.tell(myStory.characters.phobia, 1);
         await myStory.tell(myStory.characters.webster, 2);
@@ -937,8 +945,12 @@ var myStory;
         await myStory.tell(myStory.characters.phobia, 3);
         await myStory.newPose(myStory.characters.webster, "happy");
         await myStory.tell(myStory.characters.phobia, 4);
+        myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0, 0.5);
         myStory.ƒS.Sound.play(myStory.sounds.moments_later, 0.5);
+        await myStory.newPose(myStory.characters.phobia, "sad");
+        myStory.ƒS.Sound.fade(myStory.sounds.drugs, 0.3, 0.5, true);
         await myStory.tell(myStory.characters.phobia, 5);
+        await myStory.newPose(myStory.characters.phobia, "scared");
         await myStory.tell(myStory.characters.phobia, 6);
         await myStory.tell(myStory.characters.webster, 4);
         await myStory.tell(myStory.characters.webster, 5);
@@ -987,6 +999,7 @@ var myStory;
             case decitionAnswer.iSayOk:
             case decitionAnswer.iSayYes:
         }
+        myStory.showLoveMeter(25);
         myStory.ƒS.Sound.fade(myStory.sounds.restaurant_people, 0, 0.5);
         myStory.ƒS.Sound.fade(myStory.sounds.restaurant_jazz, 0, 0.5);
         await myStory.clearScene();

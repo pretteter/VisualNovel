@@ -1,7 +1,6 @@
 namespace myStory {
   export async function Intro(): ƒS.SceneReturn {
     currentActiveScene = "Intro";
-    // ƒS.Sound.play(sounds.wakeup, 0.5, true);
     ƒS.Sound.fade(sounds.wakeup, 0.3, 2, true);
     // for (let key of Object.values(items)) {
     //   ƒS.Inventory.add(key);
@@ -15,7 +14,6 @@ namespace myStory {
     //   transitions.test.alpha,
     //   transitions.test.edge
     // );
-
     await changeLocation(locations.web, transitions.test);
     await newPose(characters.webster, "normal");
     await tell(characters.webster, 1);
@@ -75,29 +73,6 @@ namespace myStory {
     await tell(characters.phobia, 9);
     await tell(characters.webster, 11);
 
-    // ƒS.Speech.clear();
-    // await ƒS.Character.hideAll();
-    // await ƒS.update();
     await clearScene();
-
-    // ƒS.Sound.play(sounds.nightclub, 0.5);
-    // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);
-
-    // let decitionAnswer = {
-    //   iSayOk: "Okay",
-    //   iSayYes: "Yes",
-    //   iSayNo: "No"
-    // }
-
-    // let decition = await ƒS.Menu.getInput(decitionAnswer, "some CSS classe");
-
-    // switch (decition) {
-    //   case decitionAnswer.iSayNo:
-
-    //   case decitionAnswer.iSayOk:
-
-    //   case decitionAnswer.iSayYes:
-
-    // }
   }
 }

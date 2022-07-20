@@ -3,8 +3,10 @@ namespace myStory {
     currentActiveScene = "Mushroom";
     currentFemaleCoordinates = { x: 20, y: 85 };
     currentMaleCoordinates = { x: 75, y: 80 };
-
+    ƒS.Sound.fade(sounds.wakeup, 0.3, 2, true);
     await changeLocation(locations.mushroom, transitions.test);
+    await newPose(characters.webster, "normal");
+    await newPose(characters.phobia, "normal");
     await tell(characters.webster, 1);
     await tell(characters.phobia, 1);
     await tell(characters.webster, 2);
@@ -13,8 +15,12 @@ namespace myStory {
     await tell(characters.phobia, 3);
     await newPose(characters.webster, "happy");
     await tell(characters.phobia, 4);
+    ƒS.Sound.fade(sounds.wakeup, 0, 0.5);
     ƒS.Sound.play(sounds.moments_later, 0.5);
+    await newPose(characters.phobia, "sad");
+    ƒS.Sound.fade(sounds.drugs, 0.3, 0.5, true);
     await tell(characters.phobia, 5);
+    await newPose(characters.phobia, "scared");
     await tell(characters.phobia, 6);
     await tell(characters.webster, 4);
     await tell(characters.webster, 5);

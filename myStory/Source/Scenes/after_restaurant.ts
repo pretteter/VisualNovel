@@ -15,6 +15,7 @@ namespace myStory {
       romantic: "romantische Nacht verbringen",
       doSomething: "zu einem weiteren tollen Ort fahren",
     };
+    hideLoveMeter();
     await tell(characters.phobia, 1);
     await tell(characters.webster, 1);
     let decition1 = await ƒS.Menu.getInput(decitionAnswer, "decision");
