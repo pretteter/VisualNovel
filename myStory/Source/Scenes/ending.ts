@@ -29,11 +29,10 @@ namespace myStory {
         return "final";
       case 100:
         await highScore();
-        ƒS.Sound.fade(sounds.dramatic, 0, 0.5);
+        ƒS.Sound.fade(sounds.love, 0, 0.5);
         await clearScene();
         return "returnAfterEnding";
     }
-
     await clearScene();
   }
   async function lowScore() {
@@ -178,6 +177,8 @@ namespace myStory {
     await tell(characters.webster, 1_3_09);
     await tell(characters.phobia, 1_3_09);
     await newPose(characters.phobia, "angry");
+    ƒS.Sound.fade(sounds.dramatic, 0, 0.5, true);
+    ƒS.Sound.fade(sounds.love, 0, 0.5, true);
     await moveCharacterToLocaton(
       characters.phobia,
       characters.phobia.pose.normal,
