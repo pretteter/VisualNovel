@@ -7,7 +7,7 @@ A FUDGE module for the easy development of interactive stories, visual novels an
 - [APIs](https://jirkadelloro.github.io/FUDGE_Story/Documentation/Reference/#fudge-story-reference)
 
 # Links
- ## Github Pages Link (lauffähige Anwendung)
+ ## Quellcode
 - [Quellcode](https://github.com/pretteter/VisualNovel/tree/main/myStory)
  ## Github Pages Link (lauffähige Anwendung)
 - [GAME](https://pretteter.github.io/VisualNovel/myStory/myStory.html)
