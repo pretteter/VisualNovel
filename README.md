@@ -8,11 +8,11 @@ A FUDGE module for the easy development of interactive stories, visual novels an
 
 # Links
  ## Github Pages Link (lauffähige Anwendung)
-- [APIs](https://pretteter.github.io/VisualNovel/myStory/myStory.html) |
+- [GAME](https://pretteter.github.io/VisualNovel/myStory/myStory.html) |
 ## Konzept Dokument
-- [APIs](https://pretteter.github.io/VisualNovel/Konzeptdokument.pdf)
+- [Konzept](https://pretteter.github.io/VisualNovel/Konzeptdokument.pdf)
 ## gepacktes Archiv
-- [APIs](https://pretteter.github.io/VisualNovel/komplettes Archiv.zip)  |
+- [Archiv](https://pretteter.github.io/VisualNovel/komplettes_Archiv.zip)  |
   <br>
 
 ## Abgabeformat
