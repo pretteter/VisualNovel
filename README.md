@@ -26,7 +26,7 @@ A FUDGE module for the easy development of interactive stories, visual novels an
 |  1 | Konzeption     | Die Konzeptdatei enthält eine Zusammenfassung, die Alleinstellungsmerkmale, das Drehbuch und eine kurze BEschreibung der Charaktere          |
 |  2 | Charakter-Konzept     | Die Charaktere sind Archetypen zugeordnet und im Konzept genauer beschrieben.             |
 |  3 | Auswahlmöglichkeiten | Es gibt einige Entscheidungen und es ist nach dem Prinzip vom Branching plots erstellt worden. Einige Dialoge ändern sich durch Entscheidungen und auch einige Lokations sind nur bei bestimmten Wahlen besuchbar. Es gibt drei verschiedene Enden.      |
-|  4 | Branching paths      | Alle Variablen haben ihrer Bedeutung entprechende Namen erhalten. In einem normalen Spieldurchlauf kann es sein, dass recht zügig das Ende erreicht wird, oder es etwas länger dauert. Je nach getroffenen Entscheidungen, welche der Spieler trifft          |
+|  4 | Branching paths      | Alle Variablen haben ihrer Bedeutung entprechende Namen erhalten. In einem normalen Spieldurchlauf kann es sein, dass recht zügig das Ende erreicht wird, oder es etwas länger dauert. Je nach getroffenen Entscheidungen, welche der Spieler trifft. Somit gibt es verschiedene Pfade, welcher der Spieler beschreiten kann.          |
 |  5 | Transitions            | Es kommen verschiedene Transistions zum Einsatz.                              |
 |  6 | Novel-Pages            | Es wurden keine Novel-Pages verwendet|
 |  7 |         Audio         | Es werden sowohl Musikstücke als auch FX Sounds verwendet. Die Musikstücke unterstreichen die aktuelle Stimmung oder Umgebung und sind permanent vorhanden. FX Sounds sind bei unterschiedlichsten Tätigkeiten hörbar, wie z.B. beim Ein- oder Aussteigen.          |
