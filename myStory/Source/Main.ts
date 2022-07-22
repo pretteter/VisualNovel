@@ -262,8 +262,9 @@ namespace myStory {
         name: "ReturnAfterEnding",
         next: "final",
       },
-      { id: "final", scene: Final, name: "Final" },
+      
       { id: "ending", scene: Ending, name: "Ending" },
+      { id: "final", scene: Final, name: "Final" },
       { id: "emptyScene", scene: EmptyScene, name: "EmptyScene" },
     ];
 

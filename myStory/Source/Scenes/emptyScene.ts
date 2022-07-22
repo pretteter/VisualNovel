@@ -1,6 +1,5 @@
 namespace myStory {
-    export async function EmptyScene(): ƒS.SceneReturn {
- 
-    }
+  export async function EmptyScene(): ƒS.SceneReturn {
+    showCredits();
   }
-  
+}

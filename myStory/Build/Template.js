@@ -865,8 +865,8 @@ var myStory;
                 name: "ReturnAfterEnding",
                 next: "final",
             },
-            { id: "final", scene: myStory.Final, name: "Final" },
             { id: "ending", scene: myStory.Ending, name: "Ending" },
+            { id: "final", scene: myStory.Final, name: "Final" },
             { id: "emptyScene", scene: myStory.EmptyScene, name: "EmptyScene" },
         ];
         // start the sequence
@@ -1035,6 +1035,7 @@ var myStory;
 var myStory;
 (function (myStory) {
     async function EmptyScene() {
+        myStory.showCredits();
     }
     myStory.EmptyScene = EmptyScene;
 })(myStory || (myStory = {}));
@@ -1208,22 +1209,9 @@ var myStory;
 (function (myStory) {
     async function Final() {
         myStory.currentActiveScene = "Final";
-        switch (myStory.dataForSave.score) {
-            case 0:
-            case 25:
-                await lowScore();
-                break;
-            case 50:
-            case 75:
-            case 100:
-                await highScore();
-                break;
-        }
-        await myStory.clearScene();
-        myStory.showCredits();
+        await highScore();
     }
     myStory.Final = Final;
-    async function lowScore() { }
     async function highScore() {
         myStory.ƒS.Sound.fade(myStory.sounds.endTheme, 0.3, 0.5, true);
         await myStory.changeLocation(myStory.locations.graveyard, myStory.transitions.puzzle);
@@ -1233,6 +1221,7 @@ var myStory;
         await myStory.tell(myStory.characters.phobia, 2);
         await myStory.newPose(myStory.characters.phobia, "normal");
         await myStory.tell(myStory.characters.phobia, 3);
+        await myStory.clearScene();
         return "emptyScene";
     }
 })(myStory || (myStory = {}));
