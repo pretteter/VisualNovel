@@ -2,7 +2,7 @@ namespace myStory {
   export async function ToRestaurant(): ƒS.SceneReturn {
     currentActiveScene = "ToRestaurant";
     ƒS.Sound.fade(sounds.explore, 0.3, 2, true);
-    await changeLocation(locations.minivan_city, transitions.test);
+    await changeLocation(locations.minivan_city, transitions.normal);
     await tell(characters.phobia, 1);
     await tell(characters.webster, 1);
     ƒS.Sound.play(sounds.car_door_open, 0.5);

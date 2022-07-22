@@ -1,7 +1,7 @@
 namespace myStory {
   export async function VanForrestOnReturn(): ƒS.SceneReturn {
     currentActiveScene = "VanForrestOnReturn";
-    await changeLocation(locations.minivan_forrest, transitions.test);
+    await changeLocation(locations.minivan_forrest, transitions.normal);
     ƒS.Sound.fade(sounds.love, 0.3, 0.5, true);
     await tell(characters.phobia, 1);
     await tell(characters.webster, 1);

@@ -6,7 +6,7 @@ namespace myStory {
     ƒS.Sound.fade(sounds.restaurant_people, 0.3, 2, true);
     ƒS.Sound.fade(sounds.restaurant_jazz, 0.2, 2, true);
 
-    await changeLocation(locations.restaurant_underTable, transitions.test);
+    await changeLocation(locations.restaurant_underTable, transitions.normal);
     await newPose(characters.webster, "normal");
     await newPose(characters.phobia, "normal");
     await tell(characters.phobia, 1);

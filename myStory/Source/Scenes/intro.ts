@@ -2,19 +2,8 @@ namespace myStory {
   export async function Intro(): ƒS.SceneReturn {
     currentActiveScene = "Intro";
     ƒS.Sound.fade(sounds.wakeup, 0.3, 2, true);
-    // for (let key of Object.values(items)) {
-    //   ƒS.Inventory.add(key);
-    // }
 
-    // ƒS.Inventory.add(items.item1);
-
-    // await ƒS.Location.show(locations.minivan1);
-    // await ƒS.update(
-    //   transitions.test.duration,
-    //   transitions.test.alpha,
-    //   transitions.test.edge
-    // );
-    await changeLocation(locations.web, transitions.test);
+    await changeLocation(locations.web, transitions.opener);
     await newPose(characters.webster, "normal");
     await tell(characters.webster, 1);
     await tell(characters.webster, 2);

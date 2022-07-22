@@ -1,6 +1,6 @@
 namespace myStory {
   export async function ReturnAfterEnding(): ƒS.SceneReturn {
-    await changeLocation(locations.flower, transitions.test);
+    await changeLocation(locations.flower, transitions.normal);
     ƒS.Sound.fade(sounds.funnyMeme, 0.3, 0.5, true);
     currentActiveScene = "ReturnAfterEnding";
     currentFemaleCoordinates = { x: 0, y: 95 };

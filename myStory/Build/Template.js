@@ -639,12 +639,17 @@ var myStory;
         },
         puzzle: {
             duration: 3,
-            alpha: "Images/FreeTransitions/JigsawThemedTransitions/puzzle.png",
+            alpha: "Images/FreeTransitions/puzzle.png",
             edge: 1,
         },
-        test: {
+        normal: {
             duration: 1,
-            alpha: "Images/FreeTransitions/2.jpg",
+            alpha: "Images/FreeTransitions/normal.jpg",
+            edge: 1,
+        },
+        opener: {
+            duration: 1,
+            alpha: "Images/FreeTransitions/opener.jpg",
             edge: 1,
         },
     };
@@ -714,42 +719,9 @@ var myStory;
         },
         flower: {
             name: "flower",
-            background: "/Images/Backgrounds/flower.jpg",
+            background: "Images/Backgrounds/flower.jpg",
         },
     };
-    // export let items = {
-    //   item1: {
-    //     name: "Stift_1",
-    //     description: "Ein Stift",
-    //     image: "../Images/Items/Pencils/pencil-1.png",
-    //     static: true,
-    //   },
-    //   item2: {
-    //     name: "Stift_2",
-    //     description: "Ein Stift",
-    //     image: "../Images/Items/Pencils/pencil-2.png",
-    //   },
-    //   item3: {
-    //     name: "Stift_3",
-    //     description: "Ein Stift",
-    //     image: "../Images/Items/Pencils/pencil-3.png",
-    //   },
-    //   item4: {
-    //     name: "Stift_4",
-    //     description: "Ein Stift",
-    //     image: "../Images/Items/Pencils/pencil-4.png",
-    //   },
-    //   item5: {
-    //     name: "Stift_5",
-    //     description: "Ein Stift",
-    //     image: "../Images/Items/Pencils/pencil-5.png",
-    //   },
-    //   item6: {
-    //     name: "Stift_6",
-    //     description: "Ein Stift",
-    //     image: "../Images/Items/Pencils/pencil-6.png",
-    //   },
-    // };
     myStory.characters = {
         mrobeer: {
             name: "Mr. Obeer",
@@ -796,7 +768,6 @@ var myStory;
     let gameMenu;
     let menuIsOpen = true;
     let isLoveMeterShowed = false;
-    // let inventoryOpen: boolean = false;
     async function buttonFunctions(option) {
         switch (option) {
             case inGameMenuButtons.save:
@@ -836,17 +807,6 @@ var myStory;
                 console.log("Load");
                 await myStory.ƒS.Progress.load();
                 break;
-            // case ƒ.KEYBOARD_CODE.I:
-            //   console.log("Inventory");
-            //   if (inventoryOpen) {
-            //     ƒS.Inventory.close();
-            //     inventoryOpen = false;
-            //   } else {
-            //     ƒS.Inventory.open();
-            //     inventoryOpen = true;
-            //   }
-            //   // inventoryOpen = !inventoryOpen
-            //   break;
             case myStory.ƒ.KEYBOARD_CODE.M:
                 console.log("Menu");
                 if (menuIsOpen) {
@@ -963,7 +923,7 @@ var myStory;
 var myStory;
 (function (myStory) {
     async function AfterRestaurant() {
-        await myStory.changeLocation(myStory.locations.minivan_city, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.minivan_city, myStory.transitions.normal);
         myStory.currentActiveScene = "AfterRestaurant";
         myStory.ƒS.Sound.fade(myStory.sounds.love, 0.3, 0, true);
         myStory.ƒS.Sound.fade(myStory.sounds.car_interior, 0.8, 1, true);
@@ -1035,7 +995,7 @@ var myStory;
     async function City() {
         myStory.currentActiveScene = "City";
         myStory.ƒS.Sound.fade(myStory.sounds.city, 0.3, 2, true);
-        await myStory.changeLocation(myStory.locations.city, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.city, myStory.transitions.normal);
         await myStory.newPose(myStory.characters.webster, "happy");
         await myStory.tell(myStory.characters.webster, 1);
         await myStory.tell(myStory.characters.webster, 2);
@@ -1056,7 +1016,7 @@ var myStory;
         myStory.ƒS.Sound.fade(myStory.sounds.city, 0, 2);
         await myStory.clearScene();
         myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0.3, 2, true);
-        await myStory.changeLocation(myStory.locations.mushroom, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.mushroom, myStory.transitions.normal);
         await myStory.newPose(myStory.characters.phobia, "normal", 0);
         await myStory.newPose(myStory.characters.webster, "normal", 0);
         await myStory.tell(myStory.characters.webster, 7);
@@ -1085,7 +1045,7 @@ var myStory;
         myStory.currentFemaleCoordinates = { x: 20, y: 85 };
         myStory.currentMaleCoordinates = { x: 75, y: 80 };
         myStory.ƒS.Sound.fade(myStory.sounds.loveAlternate, 0.3, 0.5, true);
-        await myStory.changeLocation(myStory.locations.web, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.web, myStory.transitions.normal);
         await myStory.newPose(myStory.characters.phobia, "normal");
         await myStory.newPose(myStory.characters.webster, "normal");
         await myStory.tell(myStory.characters.phobia, 1);
@@ -1109,7 +1069,7 @@ var myStory;
                 return "final";
             case 100:
                 await highScore();
-                myStory.ƒS.Sound.fade(myStory.sounds.dramatic, 0, 0.5);
+                myStory.ƒS.Sound.fade(myStory.sounds.love, 0, 0.5);
                 await myStory.clearScene();
                 return "returnAfterEnding";
         }
@@ -1136,7 +1096,7 @@ var myStory;
         myStory.ƒS.Sound.fade(myStory.sounds.loveAlternate, 0, 0.5);
         await myStory.clearScene();
         myStory.ƒS.Sound.fade(myStory.sounds.endTheme, 0.3, 0.5);
-        await myStory.changeLocation(myStory.locations.flower, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.flower, myStory.transitions.normal);
         await myStory.newPose(myStory.characters.webster, "sad");
         await myStory.tell(myStory.characters.webster, 1_1_07);
         await myStory.tell(myStory.characters.webster, 1_1_08);
@@ -1222,6 +1182,8 @@ var myStory;
         await myStory.tell(myStory.characters.webster, 1_3_09);
         await myStory.tell(myStory.characters.phobia, 1_3_09);
         await myStory.newPose(myStory.characters.phobia, "angry");
+        myStory.ƒS.Sound.fade(myStory.sounds.dramatic, 0, 0.5, true);
+        myStory.ƒS.Sound.fade(myStory.sounds.love, 0, 0.5, true);
         await myStory.moveCharacterToLocaton(myStory.characters.phobia, myStory.characters.phobia.pose.normal, {
             x: 25,
             y: 80,
@@ -1279,7 +1241,7 @@ var myStory;
     async function Holiday() {
         myStory.currentActiveScene = "Holiday";
         myStory.ƒS.Sound.fade(myStory.sounds.holiday, 0.3, 2, true);
-        await myStory.changeLocation(myStory.locations.holiday, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.holiday, myStory.transitions.normal);
         await myStory.newPose(myStory.characters.webster, "normal");
         await myStory.tell(myStory.characters.webster, 1);
         await myStory.tell(myStory.characters.phobia, 1);
@@ -1321,7 +1283,7 @@ var myStory;
         myStory.ƒS.Sound.fade(myStory.sounds.holiday, 0, 0.5);
         await myStory.clearScene();
         myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0.3, 2, true);
-        await myStory.changeLocation(myStory.locations.mushroom, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.mushroom, myStory.transitions.normal);
         await myStory.newPose(myStory.characters.phobia, "normal", 0);
         await myStory.newPose(myStory.characters.webster, "normal", 0);
         await myStory.tell(myStory.characters.webster, 8);
@@ -1341,17 +1303,7 @@ var myStory;
     async function Intro() {
         myStory.currentActiveScene = "Intro";
         myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0.3, 2, true);
-        // for (let key of Object.values(items)) {
-        //   ƒS.Inventory.add(key);
-        // }
-        // ƒS.Inventory.add(items.item1);
-        // await ƒS.Location.show(locations.minivan1);
-        // await ƒS.update(
-        //   transitions.test.duration,
-        //   transitions.test.alpha,
-        //   transitions.test.edge
-        // );
-        await myStory.changeLocation(myStory.locations.web, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.web, myStory.transitions.opener);
         await myStory.newPose(myStory.characters.webster, "normal");
         await myStory.tell(myStory.characters.webster, 1);
         await myStory.tell(myStory.characters.webster, 2);
@@ -1404,7 +1356,7 @@ var myStory;
         myStory.currentFemaleCoordinates = { x: 20, y: 85 };
         myStory.currentMaleCoordinates = { x: 75, y: 80 };
         myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0.3, 2, true);
-        await myStory.changeLocation(myStory.locations.mushroom, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.mushroom, myStory.transitions.normal);
         await myStory.newPose(myStory.characters.webster, "normal");
         await myStory.newPose(myStory.characters.phobia, "normal");
         await myStory.tell(myStory.characters.webster, 1);
@@ -1455,7 +1407,7 @@ var myStory;
         myStory.currentMaleCoordinates = { x: 75, y: 80 };
         myStory.ƒS.Sound.fade(myStory.sounds.restaurant_people, 0.3, 2, true);
         myStory.ƒS.Sound.fade(myStory.sounds.restaurant_jazz, 0.2, 2, true);
-        await myStory.changeLocation(myStory.locations.restaurant_underTable, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.restaurant_underTable, myStory.transitions.normal);
         await myStory.newPose(myStory.characters.webster, "normal");
         await myStory.newPose(myStory.characters.phobia, "normal");
         await myStory.tell(myStory.characters.phobia, 1);
@@ -1513,7 +1465,7 @@ var myStory;
 var myStory;
 (function (myStory) {
     async function ReturnAfterEnding() {
-        await myStory.changeLocation(myStory.locations.flower, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.flower, myStory.transitions.normal);
         myStory.ƒS.Sound.fade(myStory.sounds.funnyMeme, 0.3, 0.5, true);
         myStory.currentActiveScene = "ReturnAfterEnding";
         myStory.currentFemaleCoordinates = { x: 0, y: 95 };
@@ -1562,7 +1514,7 @@ var myStory;
     async function Swing() {
         myStory.currentActiveScene = "Swing";
         myStory.ƒS.Sound.fade(myStory.sounds.loveAlternate, 0.3, 3, true);
-        await myStory.changeLocation(myStory.locations.swing, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.swing, myStory.transitions.normal);
         myStory.currentMaleCoordinates = { x: 100, y: 80 };
         await myStory.newPose(myStory.characters.phobia, "normal");
         await myStory.moveCharacterToLocaton(myStory.characters.webster, myStory.characters.webster.pose.happy, {
@@ -1618,7 +1570,7 @@ var myStory;
     async function ToRestaurant() {
         myStory.currentActiveScene = "ToRestaurant";
         myStory.ƒS.Sound.fade(myStory.sounds.explore, 0.3, 2, true);
-        await myStory.changeLocation(myStory.locations.minivan_city, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.minivan_city, myStory.transitions.normal);
         await myStory.tell(myStory.characters.phobia, 1);
         await myStory.tell(myStory.characters.webster, 1);
         myStory.ƒS.Sound.play(myStory.sounds.car_door_open, 0.5);
@@ -1665,20 +1617,7 @@ var myStory;
         myStory.currentFemaleCoordinates.x = 17;
         myStory.currentFemaleCoordinates.y = 85;
         myStory.currentMaleCoordinates.x = 75;
-        // let spanElements = Array.from(
-        //   document.getElementsByTagName("speech") as HTMLCollectionOf<HTMLElement>
-        // );
-        // spanElements.forEach((element) => {
-        //   element.style.backgroundColor = "rgba(255, 32, 1, 0.9)";
-        //   // element.style.opacity = "0.9";
-        // });
-        // ƒS.Sound.play(sounds.nightclub, 0.5);
-        // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);
-        // for (let key of Object.values(items)) {
-        //   ƒS.Inventory.add(key);
-        // }
-        // ƒS.Inventory.add(items.item1);
-        await myStory.changeLocation(myStory.locations.minivan_forrest, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.minivan_forrest, myStory.transitions.normal);
         await myStory.newPose(myStory.characters.webster, "normal", 0);
         await myStory.newPose(myStory.characters.phobia, "normal", 0);
         await myStory.tell(myStory.characters.phobia, 1);
@@ -1701,8 +1640,6 @@ var myStory;
         myStory.ƒS.Sound.play(myStory.sounds.car_door_close, 0.5);
         myStory.ƒS.Sound.fade(myStory.sounds.wakeup, 0, 0.5, true);
         await myStory.clearScene();
-        // ƒS.Sound.play(sounds.nightclub, 0.5);
-        // ƒS.Sound.fade(sounds.nightclub, 0.5, 2, true);
     }
     myStory.VanForrest = VanForrest;
 })(myStory || (myStory = {}));
@@ -1710,7 +1647,7 @@ var myStory;
 (function (myStory) {
     async function VanForrestOnReturn() {
         myStory.currentActiveScene = "VanForrestOnReturn";
-        await myStory.changeLocation(myStory.locations.minivan_forrest, myStory.transitions.test);
+        await myStory.changeLocation(myStory.locations.minivan_forrest, myStory.transitions.normal);
         myStory.ƒS.Sound.fade(myStory.sounds.love, 0.3, 0.5, true);
         await myStory.tell(myStory.characters.phobia, 1);
         await myStory.tell(myStory.characters.webster, 1);

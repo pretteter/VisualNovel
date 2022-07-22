@@ -4,7 +4,7 @@ namespace myStory {
     currentFemaleCoordinates = { x: 20, y: 85 };
     currentMaleCoordinates = { x: 75, y: 80 };
     ƒS.Sound.fade(sounds.wakeup, 0.3, 2, true);
-    await changeLocation(locations.mushroom, transitions.test);
+    await changeLocation(locations.mushroom, transitions.normal);
     await newPose(characters.webster, "normal");
     await newPose(characters.phobia, "normal");
     await tell(characters.webster, 1);

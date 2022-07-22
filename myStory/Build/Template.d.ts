@@ -391,7 +391,12 @@ declare namespace myStory {
             alpha: string;
             edge: number;
         };
-        test: {
+        normal: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
+        opener: {
             duration: number;
             alpha: string;
             edge: number;

@@ -1,6 +1,6 @@
 namespace myStory {
   export async function AfterRestaurant(): ƒS.SceneReturn {
-    await changeLocation(locations.minivan_city, transitions.test);
+    await changeLocation(locations.minivan_city, transitions.normal);
     currentActiveScene = "AfterRestaurant";
     ƒS.Sound.fade(sounds.love, 0.3, 0, true);
     ƒS.Sound.fade(sounds.car_interior, 0.8, 1, true);

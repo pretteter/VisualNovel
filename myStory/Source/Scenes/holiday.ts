@@ -2,7 +2,7 @@ namespace myStory {
   export async function Holiday(): ƒS.SceneReturn {
     currentActiveScene = "Holiday";
     ƒS.Sound.fade(sounds.holiday, 0.3, 2, true);
-    await changeLocation(locations.holiday, transitions.test);
+    await changeLocation(locations.holiday, transitions.normal);
 
     await newPose(characters.webster, "normal");
     await tell(characters.webster, 1);
@@ -53,7 +53,7 @@ namespace myStory {
     await clearScene();
 
     ƒS.Sound.fade(sounds.wakeup, 0.3, 2, true);
-    await changeLocation(locations.mushroom, transitions.test);
+    await changeLocation(locations.mushroom, transitions.normal);
     await newPose(characters.phobia, "normal", 0);
     await newPose(characters.webster, "normal", 0);
     await tell(characters.webster, 8);

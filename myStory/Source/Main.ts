@@ -20,12 +20,17 @@ namespace myStory {
     },
     puzzle: {
       duration: 3,
-      alpha: "Images/FreeTransitions/JigsawThemedTransitions/puzzle.png",
+      alpha: "Images/FreeTransitions/puzzle.png",
       edge: 1,
     },
-    test: {
+    normal: {
       duration: 1,
-      alpha: "Images/FreeTransitions/2.jpg",
+      alpha: "Images/FreeTransitions/normal.jpg",
+      edge: 1,
+    },
+    opener: {
+      duration: 1,
+      alpha: "Images/FreeTransitions/opener.jpg",
       edge: 1,
     },
   };
@@ -104,40 +109,6 @@ namespace myStory {
     },
   };
 
-  // export let items = {
-  //   item1: {
-  //     name: "Stift_1",
-  //     description: "Ein Stift",
-  //     image: "../Images/Items/Pencils/pencil-1.png",
-  //     static: true,
-  //   },
-  //   item2: {
-  //     name: "Stift_2",
-  //     description: "Ein Stift",
-  //     image: "../Images/Items/Pencils/pencil-2.png",
-  //   },
-  //   item3: {
-  //     name: "Stift_3",
-  //     description: "Ein Stift",
-  //     image: "../Images/Items/Pencils/pencil-3.png",
-  //   },
-  //   item4: {
-  //     name: "Stift_4",
-  //     description: "Ein Stift",
-  //     image: "../Images/Items/Pencils/pencil-4.png",
-  //   },
-  //   item5: {
-  //     name: "Stift_5",
-  //     description: "Ein Stift",
-  //     image: "../Images/Items/Pencils/pencil-5.png",
-  //   },
-  //   item6: {
-  //     name: "Stift_6",
-  //     description: "Ein Stift",
-  //     image: "../Images/Items/Pencils/pencil-6.png",
-  //   },
-  // };
-
   export let characters = {
     mrobeer: {
       name: "Mr. Obeer",
@@ -188,7 +159,6 @@ namespace myStory {
   let gameMenu: ƒS.Menu;
   let menuIsOpen: boolean = true;
   let isLoveMeterShowed: boolean = false;
-  // let inventoryOpen: boolean = false;
 
   async function buttonFunctions(option: string): Promise<void> {
     switch (option) {
@@ -229,17 +199,6 @@ namespace myStory {
         console.log("Load");
         await ƒS.Progress.load();
         break;
-      // case ƒ.KEYBOARD_CODE.I:
-      //   console.log("Inventory");
-      //   if (inventoryOpen) {
-      //     ƒS.Inventory.close();
-      //     inventoryOpen = false;
-      //   } else {
-      //     ƒS.Inventory.open();
-      //     inventoryOpen = true;
-      //   }
-      //   // inventoryOpen = !inventoryOpen
-      //   break;
       case ƒ.KEYBOARD_CODE.M:
         console.log("Menu");
         if (menuIsOpen) {

@@ -4,7 +4,7 @@ namespace myStory {
     currentFemaleCoordinates = { x: 20, y: 85 };
     currentMaleCoordinates = { x: 75, y: 80 };
     ƒS.Sound.fade(sounds.loveAlternate, 0.3, 0.5, true);
-    await changeLocation(locations.web, transitions.test);
+    await changeLocation(locations.web, transitions.normal);
     await newPose(characters.phobia, "normal");
     await newPose(characters.webster, "normal");
     await tell(characters.phobia, 1);
@@ -55,7 +55,7 @@ namespace myStory {
     ƒS.Sound.fade(sounds.loveAlternate, 0, 0.5);
     await clearScene();
     ƒS.Sound.fade(sounds.endTheme, 0.3, 0.5);
-    await changeLocation(locations.flower, transitions.test);
+    await changeLocation(locations.flower, transitions.normal);
     await newPose(characters.webster, "sad");
     await tell(characters.webster, 1_1_07);
     await tell(characters.webster, 1_1_08);

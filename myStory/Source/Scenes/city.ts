@@ -2,7 +2,7 @@ namespace myStory {
   export async function City(): ƒS.SceneReturn {
     currentActiveScene = "City";
     ƒS.Sound.fade(sounds.city, 0.3, 2, true);
-    await changeLocation(locations.city, transitions.test);
+    await changeLocation(locations.city, transitions.normal);
 
     await newPose(characters.webster, "happy");
     await tell(characters.webster, 1);
@@ -25,7 +25,7 @@ namespace myStory {
     await clearScene();
 
     ƒS.Sound.fade(sounds.wakeup, 0.3, 2, true);
-    await changeLocation(locations.mushroom, transitions.test);
+    await changeLocation(locations.mushroom, transitions.normal);
     await newPose(characters.phobia, "normal", 0);
     await newPose(characters.webster, "normal", 0);
     await tell(characters.webster, 7);

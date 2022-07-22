@@ -2,7 +2,7 @@ namespace myStory {
   export async function Swing(): ƒS.SceneReturn {
     currentActiveScene = "Swing";
     ƒS.Sound.fade(sounds.loveAlternate, 0.3, 3, true);
-    await changeLocation(locations.swing, transitions.test);
+    await changeLocation(locations.swing, transitions.normal);
     currentMaleCoordinates = { x: 100, y: 80 };
     await newPose(characters.phobia, "normal");
     await moveCharacterToLocaton(
