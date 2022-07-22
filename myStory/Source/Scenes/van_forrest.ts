@@ -3,7 +3,6 @@ namespace myStory {
     currentActiveScene = "VanForrest";
     currentFemaleCoordinates.x = 17;
     currentFemaleCoordinates.y = 85;
-
     currentMaleCoordinates.x = 75;
 
     await changeLocation(locations.minivan_forrest, transitions.normal);
