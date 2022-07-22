@@ -12,7 +12,7 @@ A FUDGE module for the easy development of interactive stories, visual novels an
 ## Konzept Dokument
 - [Konzept](https://pretteter.github.io/VisualNovel/Konzeptdokument.pdf)
 ## gepacktes Archiv
-- [Archiv](https://pretteter.github.io/VisualNovel/komplettes_Archiv.zip)
+- [Archiv](https://github.com/pretteter/VisualNovel/raw/main/komplettes_Archiv.zip)
   <br>
 
 ## Abgabeformat
