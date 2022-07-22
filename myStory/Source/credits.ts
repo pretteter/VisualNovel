@@ -20,7 +20,7 @@ namespace myStory {
       Komponist_1:"Eric Taylors released under the Attribution 4.0 International (CC BY 4.0)",
       Komponist_2:"Nicolas Jeudy Creator of DARK FANTASY STUDIO",
       Weitere:"SHUTTERSTOCK MUSIC CANADA ULC",
-      Lizenz:"Befindet sich im Sound Ordner"
+      Lizenz:"Befindet sich im Sound Ordner. PW. Muss angefragt werden!"
     }
   };
 

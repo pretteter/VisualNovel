@@ -34,7 +34,7 @@ namespace myStory {
     wakeup: "Sounds/Sad_and_Sweet/wakeup.mp3",
     explore: "Sounds/Humorus_lighthearted/exploring.mp3",
     city: "Sounds/Busy City Street.mp3",
-    holliday: "Sounds/- 13 - The Lost Island.mp3",
+    holiday: "Sounds/- 13 - The Lost Island.mp3",
     restaurant_people: "Sounds/Coffee Shop.mp3",
     restaurant_jazz: "Sounds/jazz trio.mp3",
     car_interior: "Sounds/Car Interior.mp3",
@@ -43,6 +43,7 @@ namespace myStory {
     drugs: "Sounds/17-Dark Fantasy Studio- Joke.mp3",
     funnyMeme: "Sounds/Humorus_lighthearted/the_funny_mime.mp3",
     endTheme: "Sounds/Medieval Theme.wav",
+    loveAlternate: "Sounds/23-Dark Fantasy Studio- Simple romance.mp3",
 
     // soundeffects
     drums: "Sounds/drum_beats_and_loops/drumbeat.wav",
@@ -50,10 +51,13 @@ namespace myStory {
     car_door_close: "Sounds/Effects/Car door.wav",
     moments_later:
       "Sounds/Effects/SPONGEBOB TIME CARDS - A FEW MOMENTS LATER.mp3",
+    eternity_later:
+      "Sounds/Effects/SPONGEBOB TIME CARDS - ONE ETERNITY LATER.mp3",
     suspense: "Sounds/Effects/Suspense.mp3",
     bloodSpill: "Sounds/Effects/blood_guts_spill.wav",
     bloodHit: "Sounds/Effects/Blood_Hit.wav",
     scaryShort: "Sounds/Effects/Suspense short.mp3",
+    turnTable: "Sounds/Effects/Turntable Scratch.mp3",
   };
 
   export let locations = {
@@ -90,9 +94,9 @@ namespace myStory {
       name: "city",
       background: "Images/Backgrounds/city.jpg",
     },
-    holliday: {
-      name: "holliday",
-      background: "Images/Backgrounds/holliday.jpg",
+    holiday: {
+      name: "holiday",
+      background: "Images/Backgrounds/holiday.jpg",
     },
     flower: {
       name: "flower",
@@ -263,39 +267,45 @@ namespace myStory {
     element.style.display = "none";
 
     let scenes: ƒS.Scenes = [
-      // { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
-      // {
-      //   id: "vanForrest",
-      //   scene: VanForrest,
-      //   name: "VanForrest",
-      //   next: "toRestaurant",
-      // },
-      // {
-      //   id: "toRestaurant",
-      //   scene: ToRestaurant,
-      //   name: "toRestaurant",
-      //   next: "restaurant",
-      // },
-      // {
-      //   id: "restaurant",
-      //   scene: Restaurant,
-      //   name: "Restaurant_under_Table",
-      //   next: "afterRestaurant",
-      // },
-      // { id: "afterRestaurant", scene: AfterRestaurant, name: "VanStreet_back" },
-      // {
-      //   id: "vanForrestOnReturn",
-      //   scene: VanForrestOnReturn,
-      //   name: "Van in front of Home",
-      // },
-      // { id: "mushroom", scene: Mushroom, name: "Mushroom" },
-      // { id: "swing", scene: Swing, name: "Ending" },
-      // { id: "ending", scene: Ending, name: "Ending" },
+      { id: "intro", scene: Intro, name: "Intro", next: "vanForrest" },
+      {
+        id: "vanForrest",
+        scene: VanForrest,
+        name: "VanForrest",
+        next: "toRestaurant",
+      },
+      {
+        id: "toRestaurant",
+        scene: ToRestaurant,
+        name: "toRestaurant",
+        next: "restaurant",
+      },
+      {
+        id: "restaurant",
+        scene: Restaurant,
+        name: "Restaurant_under_Table",
+        next: "afterRestaurant",
+      },
+      { id: "afterRestaurant", scene: AfterRestaurant, name: "VanStreet_back" },
+      {
+        id: "vanForrestOnReturn",
+        scene: VanForrestOnReturn,
+        name: "Van in front of Home",
+      },
+      { id: "mushroom", scene: Mushroom, name: "Mushroom" },
+      { id: "city", scene: City, name: "City", next: "swing" },
+      { id: "holiday", scene: Holiday, name: "Holiday", next: "swing" },
+      { id: "swing", scene: Swing, name: "Ending", next: "ending" },
+
       {
         id: "returnAfterEnding",
         scene: ReturnAfterEnding,
         name: "ReturnAfterEnding",
+        next: "final",
       },
+      { id: "final", scene: Final, name: "Final" },
+      { id: "ending", scene: Ending, name: "Ending" },
+      { id: "emptyScene", scene: EmptyScene, name: "EmptyScene" },
     ];
 
     // start the sequence

@@ -7,7 +7,8 @@ namespace myStory {
     pose: typeof characters.webster.pose.angry,
     locationToMove: { x: number; y: number },
     intervallSeconds: number,
-    hideAfterReaching?: number
+    hideAfterReaching?: number,
+    startCoordinates?: { x: number; y: number }
   ) {
     let x;
     let y;
@@ -15,9 +16,13 @@ namespace myStory {
     if (character.name === characters.webster.name) {
       x = currentMaleCoordinates.x;
       y = currentMaleCoordinates.y;
-    } else {
+    } else if (character.name === characters.phobia.name) {
       x = currentFemaleCoordinates.x;
       y = currentFemaleCoordinates.y;
+    }
+    if ((!x || !y) && startCoordinates) {
+      x = startCoordinates.x;
+      y = startCoordinates.y;
     }
 
     x > locationToMove.x ? (x -= 1) : "";
@@ -28,7 +33,7 @@ namespace myStory {
     if (character.name === characters.webster.name) {
       currentMaleCoordinates.x = x;
       currentMaleCoordinates.y = y;
-    } else {
+    } else if (character.name === characters.phobia.name) {
       currentFemaleCoordinates.x = x;
       currentFemaleCoordinates.y = y;
     }
@@ -47,7 +52,8 @@ namespace myStory {
         pose,
         locationToMove,
         intervallSeconds,
-        hideAfterReaching
+        hideAfterReaching,
+        character.name === characters.mrobeer.name ? { x, y } : undefined
       );
     } else if (hideAfterReaching) {
       await ƒS.Character.hide(character);
@@ -71,7 +77,7 @@ namespace myStory {
       if (character.name == characters.webster.name) {
         position.x = currentMaleCoordinates.x;
         position.y = currentMaleCoordinates.y;
-      } else {
+      } else if (character.name == characters.phobia.name) {
         position.x = currentFemaleCoordinates.x;
         position.y = currentFemaleCoordinates.y;
       }
@@ -79,7 +85,7 @@ namespace myStory {
       if (character.name == characters.webster.name) {
         currentMaleCoordinates.x = position.x;
         currentMaleCoordinates.y = position.y;
-      } else {
+      } else if (character.name == characters.phobia.name) {
         currentFemaleCoordinates.x = position.x;
         currentFemaleCoordinates.y = position.y;
       }
@@ -151,6 +157,7 @@ namespace myStory {
       document.getElementsByTagName("speech") as HTMLCollectionOf<HTMLElement>
     )[0];
     element.style.display = "";
+    hideLoveMeter();
   }
 
   export async function clearScene() {
@@ -179,5 +186,9 @@ namespace myStory {
 
       slide.style.display = "";
     }
+  }
+
+  export async function delay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 }

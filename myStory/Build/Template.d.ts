@@ -57,10 +57,21 @@ declare namespace myStory {
                 1: string;
                 2: string;
                 3: string;
+                1101: string;
+                1102: string;
+                1201: string;
+                1202: string;
+                4: string;
+                5: string;
             };
             femaleSpider: {
                 1: string;
                 2: string;
+                3: string;
+                1201: string;
+                4: string;
+                5: string;
+                6: string;
             };
             obee: {
                 1: string;
@@ -68,6 +79,7 @@ declare namespace myStory {
                 3: string;
                 4: string;
                 5: string;
+                6: string;
             };
         };
         AfterRestaurant: {
@@ -111,7 +123,7 @@ declare namespace myStory {
                 8: string;
             };
         };
-        Holliday: {
+        Holiday: {
             webster: {
                 1: string;
                 2: string;
@@ -120,6 +132,11 @@ declare namespace myStory {
                 3: string;
                 4: string;
                 5: string;
+                6: string;
+                7: string;
+                8: string;
+                9: string;
+                10: string;
             };
             femaleSpider: {
                 1: string;
@@ -129,6 +146,12 @@ declare namespace myStory {
                 4: string;
                 5: string;
                 6: string;
+                7: string;
+                8: string;
+                9: string;
+                10: string;
+                11: string;
+                12: string;
             };
             obee: {
                 1: string;
@@ -144,6 +167,10 @@ declare namespace myStory {
                 3: string;
                 4: string;
                 5: string;
+                6: string;
+                7: string;
+                8: string;
+                9: string;
             };
             femaleSpider: {
                 1: string;
@@ -152,6 +179,9 @@ declare namespace myStory {
                 4: string;
                 5: string;
                 6: string;
+                7: string;
+                8: string;
+                9: string;
             };
         };
         VanForrestOnReturn: {
@@ -184,27 +214,87 @@ declare namespace myStory {
                 1: string;
                 2: string;
                 3: string;
+                4: string;
+                5: string;
+                6: string;
+                1101: string;
+                1201: string;
+                7: string;
             };
             femaleSpider: {
                 1: string;
                 2: string;
                 3: string;
+                4: string;
+                5: string;
+                6: string;
+                1101: string;
+                1201: string;
+                7: string;
             };
         };
         Ending: {
             webster: {
                 1: string;
                 2: string;
-                3: string;
                 1101: string;
+                1102: string;
+                1103: string;
+                1104: string;
+                1105: string;
+                1106: string;
+                1107: string;
+                1108: string;
+                1109: string;
                 1201: string;
+                1202: string;
+                1203: string;
+                1204: string;
+                1205: string;
+                1206: string;
+                1207: string;
+                1208: string;
                 1301: string;
+                1302: string;
+                1303: string;
+                1304: string;
+                1305: string;
+                1306: string;
+                1307: string;
+                1308: string;
+                1309: string;
             };
             femaleSpider: {
                 1: string;
+                2: string;
                 1101: string;
+                1102: string;
+                1103: string;
+                1104: string;
+                1105: string;
                 1201: string;
+                1202: string;
+                1203: string;
+                1204: string;
+                1205: string;
+                1206: string;
+                1207: string;
+                1208: string;
+                1209: string;
+                1210: string;
+                1211: string;
                 1301: string;
+                1302: string;
+                1303: string;
+                1304: string;
+                1305: string;
+                1306: string;
+                1307: string;
+                1308: string;
+                1309: string;
+                1310: string;
+                1311: string;
+                1312: string;
             };
         };
         ReturnAfterEnding: {
@@ -230,6 +320,14 @@ declare namespace myStory {
                 7: string;
                 8: string;
                 9: string;
+            };
+        };
+        Final: {
+            webster: {};
+            femaleSpider: {
+                1: string;
+                2: string;
+                3: string;
             };
         };
     };
@@ -258,7 +356,10 @@ declare namespace myStory {
     function moveCharacterToLocaton(character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer, pose: typeof characters.webster.pose.angry, locationToMove: {
         x: number;
         y: number;
-    }, intervallSeconds: number, hideAfterReaching?: number): Promise<void>;
+    }, intervallSeconds: number, hideAfterReaching?: number, startCoordinates?: {
+        x: number;
+        y: number;
+    }): Promise<void>;
     function newPose(character: typeof characters.webster | typeof characters.phobia | typeof characters.mrobeer, mood: "angry" | "sad" | "normal" | "scared" | "happy" | "demon", update?: number, position?: {
         x: number;
         y: number;
@@ -268,6 +369,7 @@ declare namespace myStory {
     function clearScene(): Promise<void>;
     function hideLoveMeter(): void;
     function showLoveMeter(value?: 0 | 25 | 50 | 75 | 100): void;
+    function delay(ms: number): Promise<unknown>;
 }
 declare namespace myStory {
     export import ƒ = FudgeCore;
@@ -302,7 +404,7 @@ declare namespace myStory {
         wakeup: string;
         explore: string;
         city: string;
-        holliday: string;
+        holiday: string;
         restaurant_people: string;
         restaurant_jazz: string;
         car_interior: string;
@@ -311,14 +413,17 @@ declare namespace myStory {
         drugs: string;
         funnyMeme: string;
         endTheme: string;
+        loveAlternate: string;
         drums: string;
         car_door_open: string;
         car_door_close: string;
         moments_later: string;
+        eternity_later: string;
         suspense: string;
         bloodSpill: string;
         bloodHit: string;
         scaryShort: string;
+        turnTable: string;
     };
     let locations: {
         web: {
@@ -353,7 +458,7 @@ declare namespace myStory {
             name: string;
             background: string;
         };
-        holliday: {
+        holiday: {
             name: string;
             background: string;
         };
@@ -402,6 +507,9 @@ declare namespace myStory {
     function showCredits(): void;
 }
 declare namespace myStory {
+    function EmptyScene(): ƒS.SceneReturn;
+}
+declare namespace myStory {
     function AfterRestaurant(): ƒS.SceneReturn;
 }
 declare namespace myStory {
@@ -409,6 +517,12 @@ declare namespace myStory {
 }
 declare namespace myStory {
     function Ending(): ƒS.SceneReturn;
+}
+declare namespace myStory {
+    function Final(): ƒS.SceneReturn;
+}
+declare namespace myStory {
+    function Holiday(): ƒS.SceneReturn;
 }
 declare namespace myStory {
     function Intro(): ƒS.SceneReturn;

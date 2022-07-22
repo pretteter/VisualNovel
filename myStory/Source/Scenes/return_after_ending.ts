@@ -4,6 +4,7 @@ namespace myStory {
     ƒS.Sound.fade(sounds.funnyMeme, 0.3, 0.5, true);
     currentActiveScene = "ReturnAfterEnding";
     currentFemaleCoordinates = { x: 0, y: 95 };
+    currentMaleCoordinates = { x: 75, y: 80 };
 
     await newPose(characters.webster, "normal");
     await tell(characters.webster, 1);
@@ -46,17 +47,6 @@ namespace myStory {
     ƒS.Sound.fade(sounds.funnyMeme, 0, 1);
     await tell(characters.webster, 10);
     await clearScene();
-
-    ƒS.Sound.fade(sounds.endTheme, 0.3, 0.5, true);
-    await changeLocation(locations.graveyard, transitions.puzzle);
-    await newPose(characters.phobia, "normal", 0, { x: 15, y: 90 });
-    await tell(characters.phobia, 7);
-    await newPose(characters.phobia, "sad");
-    await tell(characters.phobia, 8);
-    await newPose(characters.phobia, "normal");
-    await tell(characters.phobia, 9);
-
-    await clearScene();
-    showCredits();
+    return "emptyScene";
   }
 }
