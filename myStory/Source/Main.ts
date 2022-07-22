@@ -100,7 +100,7 @@ namespace myStory {
     },
     flower: {
       name: "flower",
-      background: "/Images/Backgrounds/flower.jpg",
+      background: "Images/Backgrounds/flower.jpg",
     },
   };
 
