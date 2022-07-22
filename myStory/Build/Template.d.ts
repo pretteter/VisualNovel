@@ -127,8 +127,6 @@ declare namespace myStory {
             webster: {
                 1: string;
                 2: string;
-                1101: string;
-                1201: string;
                 3: string;
                 4: string;
                 5: string;
@@ -142,7 +140,6 @@ declare namespace myStory {
                 1: string;
                 2: string;
                 3: string;
-                1101: string;
                 4: string;
                 5: string;
                 6: string;
@@ -507,13 +504,13 @@ declare namespace myStory {
     function showCredits(): void;
 }
 declare namespace myStory {
-    function EmptyScene(): ƒS.SceneReturn;
-}
-declare namespace myStory {
     function AfterRestaurant(): ƒS.SceneReturn;
 }
 declare namespace myStory {
     function City(): ƒS.SceneReturn;
+}
+declare namespace myStory {
+    function EmptyScene(): ƒS.SceneReturn;
 }
 declare namespace myStory {
     function Ending(): ƒS.SceneReturn;

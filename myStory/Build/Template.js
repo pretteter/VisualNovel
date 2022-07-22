@@ -77,9 +77,9 @@ var myStory;
             },
             obee: {
                 1: "Ich glaub ich spinne. Dass du auch mal wieder im Lande bist. Und wie ich sehe sogar in Begleitung",
-                2: "Anscheinend ja. Was kann ich euch denn bringen",
-                3: "Zum Trinken haben wir heute ganz frische Kakerlake. Verflüssigt mit dem ausgezeichnetem 3 Sterne Speichel unseres Chef",
-                4: "Zum Essen kann ich das vor erst 10 minuten fallen gelassene Stück Fliege von Tisch 10 dort drüben empfehlen. Habe ich selbst gekostet",
+                2: "Anscheinend ja. Was kann ich euch denn bringen?",
+                3: "Zum Trinken haben wir heute ganz frische Kakerlake. Verflüssigt mit dem ausgezeichnetem 3 Sterne Speichel unseres Chefs",
+                4: "Zum Essen kann ich das vor erst 10 Minuten fallen gelassene Stück Fliege von Tisch 10 dort drüben empfehlen. Habe ich selbst gekostet",
                 5: "Großartig. Essen kommt sofort",
                 6: "Einen schönen Abend euch",
             },
@@ -129,8 +129,6 @@ var myStory;
             webster: {
                 1: "Du müsstest hier sein. Es ist soooo schön",
                 2: "Ja ne? So nackt.",
-                1_1_01: "Was anderes nackt wäre natürlich auch schön",
-                1_2_01: "...",
                 3: "Psst!! Ich träume öfters von ihm. Mach dir keine Sorgen",
                 4: "ENDLICH. Sooo nötig",
                 5: "Ja was? muss doch gut riechen",
@@ -141,22 +139,21 @@ var myStory;
                 10: "Oki. Bis morgen dann",
             },
             femaleSpider: {
-                1: "Aber das bin ich doch schon.",
+                1: "Aber das bin ich doch schon",
                 2: "2 Liegen, eine grandiose Aussicht und keiiine Sorgen",
-                3: "Das ist das erste mal, dass ich Berge ohne Bäume sehe. Seltsamer Anblick",
-                1_1_01: "Jaja. Wer hätte es nicht gern",
+                3: "Das ist das erste Mal, dass ich Berge ohne Bäume sehe. Seltsamer Anblick",
                 4: "Himmel Hilf. Was macht der denn hier",
                 5: "Haha. Du bist mir einer",
                 6: "Oder auch lecker schmecken!",
                 7: "Was?",
                 8: "Die Wirkung lässt auch schon wieder nach",
                 9: "ich bin schon nicht mehr bei dir",
-                10: "Ja. Würde mich sehr freuen. Bei mir in der nähe gibt es zwei coole Schaukeln.",
-                11: "Da können wir ein bischen Quatschen, wenn du willst.",
-                12: "Von hier ist es nicht weit. Ich laufe.",
+                10: "Ja. Würde mich sehr freuen. Bei mir in der Nähe gibt es zwei coole Schaukeln.",
+                11: "Da können wir ein bisschen Quatschen, wenn du willst.",
+                12: "Von hier ist es nicht weit. Ich laufe",
             },
             obee: {
-                1: "TADAAAA",
+                1: "TADAAAA!",
                 2: "Ich bringe euch die Bestellung",
                 3: "Unsere Spezialität des Hauses",
                 4: "Eine Insektencocktail-Kur für eure zarte junge Haut",
@@ -176,19 +173,19 @@ var myStory;
             },
             femaleSpider: {
                 1: "Ja ich kann sie sehen",
-                2: "Joa... schon.",
+                2: "Joa... schon",
                 3: "Gibts hier auch irgendwo einen Park? Dann könnten wir da spazieren gehen",
                 4: "Schade",
                 5: "Die Wirkung lässt auch schon wieder nach",
                 6: "ich bin schon nicht mehr bei dir",
-                7: "Joa. Wenn du magst können wir. Bei mir in der nähe gibt es zwei coole Schaukeln.",
+                7: "Joa. Wenn du magst können wir. Bei mir in der Nähe gibt es zwei coole Schaukeln.",
                 8: "Da können wir ein bischen Quatschen, wenn du willst.",
                 9: "Von hier ist es nicht weit. Ich laufe.",
             },
         },
         VanForrestOnReturn: {
             webster: {
-                1: "Da könnte ich mich ja glatt zuhause fühlem. Ist sehr ähnlich zu Meinem",
+                1: "Stimmt. Weit von mir kannst du ja nicht gar nicht wohnen, wenn ich so drüber nachdenke",
                 1_1_01: "Darf ich noch auf eine Fliege mit zu dir hoch kommen?",
                 1_2_01: "Wollen wir uns morgen nochmal sehen?",
                 1_2_02: "Lust hab ich immer. Und dich sehen will ich natürlich auch",
@@ -196,19 +193,19 @@ var myStory;
                 1_3_01: "Wann darf ich darauf hoffen, dass du wieder in mein Netz fällst?",
                 1_3_02: "Morgen Abend klingt supi. An was hast du denn gedacht?",
                 1_3_03: "Das machen wir. Dann bekomm ich noch mehr von dir",
-                1_3_04: "Bis morgen. Schlaf gut.",
+                1_3_04: "Bis morgen. Schlaf gut",
             },
             femaleSpider: {
                 1: "Soo. Da wären wir. Mein trautes Heim",
                 1_1_01: "Na da ist aber jemand sehr direkt",
                 1_1_02: "Aber natürlich. Ich hatte schon lange keinen mehr zum snacken",
                 1_2_01: "Das wäre wunderschön. Hier um die Ecke gibts zwei Schaukeln. Hast du morgen Abend Lust?",
-                1_2_02: "Dann bis morgen Abend.",
-                1_3_01: "Haha.",
+                1_2_02: "Ja. Dann bis Morgen",
+                1_3_01: "Haha",
                 1_3_02: "Hoffen darfst du viel. Aber ich denke, wir könnten morgen Abend was machen, wenn du willst?",
                 1_3_03: "Hier um die Ecke gibt es zwei Schaukeln. Da könnten wir uns ja treffen",
                 1_3_04: "Wenn du nicht aufpasst, bekommst du mehr von mir als dir lieb ist",
-                1_3_05: "Also bis morgen ja?",
+                1_3_05: "Also bis Morgen ja?",
             },
         },
         Swing: {
@@ -237,24 +234,24 @@ var myStory;
         },
         Ending: {
             webster: {
-                1: "Das sieht ja aus wie bei mir.",
+                1: "Das sieht ja aus wie bei mir",
                 2: "Könnte ich mich ja glatt wohlfühlen",
                 1_1_01: "Wirklich??",
                 1_1_02: "Och manno",
                 1_1_03: "Na gut",
-                1_1_04: "Wollen wir uns dann demnächst nochmal treffen",
+                1_1_04: "Wollen wir uns dann demnächst nochmal treffen?",
                 1_1_05: "Autsch. Das tut weh",
                 1_1_06: "Gut... Dann noch einen schönen Rest-Abend",
                 1_1_07: "Tja. Das wars wohl",
                 1_1_08: "War aber vielleicht auch besser so",
                 1_1_09: "Wer weiß, was sonst passiert wäre",
-                1_2_01: "Hö? Was meinst du",
+                1_2_01: "Hö? Was meinst du?",
                 1_2_02: "Oh...",
                 1_2_03: "Da ist aber jemand direkt",
                 1_2_04: "Das kann ich ja nicht ausschlagen",
                 1_2_05: "Ohhhhhhhhhh",
                 1_2_06: "Ist daaas guuuuhuuut",
-                1_2_07: "Ich glaub bei mir ist jetzt schluss",
+                1_2_07: "Ich glaub bei mir ist jetzt Schluss",
                 1_2_08: "Ahhhhhhhhhhhhhhhhhhhhh",
                 1_3_01: "Hö? Was meinst du",
                 1_3_02: "Oh...",
@@ -262,7 +259,7 @@ var myStory;
                 1_3_04: "Das kann ich ja nicht ausschlagen",
                 1_3_05: "Ohhhhhhhhhh",
                 1_3_06: "Ist daaas guuuuhuuut",
-                1_3_07: "Ich glaub bei mir ist jetzt schluss",
+                1_3_07: "Ich glaub bei mir ist jetzt Schluss",
                 1_3_08: "Ahhhhhhhhhhhhhhhhhhhhh",
                 1_3_09: "Hiiiillllfffeeeeee",
             },
@@ -272,11 +269,11 @@ var myStory;
                 1_1_01: "So. Genug rumgestöbert",
                 1_1_02: "Das war ein echt schöner Abend, aber ich möchte jetzt so langsam schlafen gehen",
                 1_1_03: "Tut mir leid, aber ich bin echt platt",
-                1_1_04: "Ne du lass mal. Das war nett, aber du bist nicht wirlich mein Typ",
+                1_1_04: "Ne du lass mal. Das war nett, aber du bist nicht wirklich mein Typ",
                 1_1_05: "Danke. Dir auch",
                 1_2_01: "Aber ich weiß, wo du dich noch wohlfühlen könntest",
                 1_2_02: "Bist du so doof oder was?",
-                1_2_03: "In meinem Schlafzimmer du Trottel. Mit mir",
+                1_2_03: "In meinem Schlafzimmer du Trottel. Mit mir!",
                 1_2_04: "Ich habe hung... Ähhh Appetit auf dich",
                 1_2_05: "Mmmmmhmmmm",
                 1_2_06: "Himmel tuuut das guut",
@@ -965,12 +962,6 @@ var myStory;
 })(myStory || (myStory = {}));
 var myStory;
 (function (myStory) {
-    async function EmptyScene() {
-    }
-    myStory.EmptyScene = EmptyScene;
-})(myStory || (myStory = {}));
-var myStory;
-(function (myStory) {
     async function AfterRestaurant() {
         await myStory.changeLocation(myStory.locations.minivan_city, myStory.transitions.test);
         myStory.currentActiveScene = "AfterRestaurant";
@@ -1080,6 +1071,12 @@ var myStory;
         myStory.showLoveMeter();
     }
     myStory.City = City;
+})(myStory || (myStory = {}));
+var myStory;
+(function (myStory) {
+    async function EmptyScene() {
+    }
+    myStory.EmptyScene = EmptyScene;
 })(myStory || (myStory = {}));
 var myStory;
 (function (myStory) {
