@@ -37,3 +37,5 @@ A FUDGE module for the easy development of interactive stories, visual novels an
 | 12 | Animation     | Die Figuren können sich über das Bild bewegen und ihre Position permanent verändern. Beispielsweiße beim Ain- oder Aussteigen)                                       |
 | 13 | Styling          | Alle Elemente wurden gestyled. Auch passen sich Dialogfenster und die Schriften darin dynamisch an den Ton des Hintergrundbildes an. Dies ist nicht hardcodiert sondern passt sich auch einem neuen Bild an, falls das aktuelle ersetzt werden sollte.       |
 | 14 | Enden          | Es gibt verschiedene Enden(3)
+
+Info: Alle Grafiken und Sounds sind nicht von mir erstellt. Die Ursprungsbilder sind von mir nur mit dem passenden Comic-Look versehen worden 
